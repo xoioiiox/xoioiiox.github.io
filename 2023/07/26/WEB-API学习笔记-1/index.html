@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>WEB API学习笔记 - 1 | XoioiioX's Blog</title><meta name="author" content="Viola"><meta name="copyright" content="Viola"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="建立项目Web API是网站的一部分，用于与使用具体URL请求特定信息的程序交互。这种请求称为API调用。 Django简介MVC模型：Model（模型）+ View（视图）+ Controller（控制器）设计模式  在Django中创建项目让Django新建一个名为mysite的项目：django-admin startproject mysite 12345678mysite&#x2F;    man">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WEB API学习笔记 - 1">
+<meta property="og:url" content="http://xoioiiox.github.io/2023/07/26/WEB-API%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/index.html">
+<meta property="og:site_name" content="XoioiioX&#39;s Blog">
+<meta property="og:description" content="建立项目Web API是网站的一部分，用于与使用具体URL请求特定信息的程序交互。这种请求称为API调用。 Django简介MVC模型：Model（模型）+ View（视图）+ Controller（控制器）设计模式  在Django中创建项目让Django新建一个名为mysite的项目：django-admin startproject mysite 12345678mysite&#x2F;    man">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xoioiiox.github.io/img/avatar.png">
+<meta property="article:published_time" content="2023-07-26T07:52:44.000Z">
+<meta property="article:modified_time" content="2023-07-26T07:59:01.428Z">
+<meta property="article:author" content="Viola">
+<meta property="article:tag" content="django">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xoioiiox.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://xoioiiox.github.io/2023/07/26/WEB-API%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'WEB API学习笔记 - 1',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-26 15:59:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: rgba(0,0,0,.1)"><nav id="nav"><span id="blog-info"><a href="/" title="XoioiioX's Blog"><span class="site-name">XoioiioX's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">WEB API学习笔记 - 1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-26T07:52:44.000Z" title="发表于 2023-07-26 15:52:44">2023-07-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-26T07:59:01.428Z" title="更新于 2023-07-26 15:59:01">2023-07-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="WEB API学习笔记 - 1"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="建立项目"><a href="#建立项目" class="headerlink" title="建立项目"></a>建立项目</h2><p>Web API是网站的一部分，用于与使用具体URL请求特定信息的程序交互。这种请求称为API调用。</p>
+<h3 id="Django简介"><a href="#Django简介" class="headerlink" title="Django简介"></a>Django简介</h3><p>MVC模型：Model（模型）+ View（视图）+ Controller（控制器）设计模式</p>
+<p><img src="/2023/07/26/WEB-API%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/1.png"></p>
+<h3 id="在Django中创建项目"><a href="#在Django中创建项目" class="headerlink" title="在Django中创建项目"></a>在Django中创建项目</h3><p>让Django新建一个名为mysite的项目：<code>django-admin startproject mysite</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysite/</span><br><span class="line">    manage.py</span><br><span class="line">    mysite/</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py		#指定Django如何与系统交互以及如何管理项目</span><br><span class="line">        urls.py			#告诉Django应创建哪些页面响应浏览器请求</span><br><span class="line">        asgi.py</span><br><span class="line">        wsgi.py			#帮助Django提供它创建的文件，这个文件名是Web服务器网关接口（Web server gateway interface）的首字母缩写</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><p>Django将大部分与项目相关的信息存储在数据库中，因此需要创建一个 供Django使用的数据库：<code>python manage.py migrate</code></p>
+<ul>
+<li><p>首次执行命令migrate 时，将让Django确保数据库与项目的当前状态匹配。</p>
+</li>
+<li><p>在使用SQLite（后 面将详细介绍）的新项目中首次执行这个命令时，Django将新建一个数 据库。</p>
+</li>
+</ul>
+<h3 id="查看项目"><a href="#查看项目" class="headerlink" title="查看项目"></a>查看项目</h3><p><code>python manage.py runserver</code></p>
+<p>Django启动一个名为development server的服务器，使得能够查看系统中的项目，指出项目的<code>URL(Uniform Resource Locator)</code>。</p>
+<h2 id="创建应用程序"><a href="#创建应用程序" class="headerlink" title="创建应用程序"></a>创建应用程序</h2><p>Django项目由一系列应用程序组成，它们协同工作让项目成为一个整体。</p>
+<p><code>python manage.py startapp app_name</code>：让Django搭建创建应用程序所需的基础设施</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app_name/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py</span><br><span class="line">    migrations/</span><br><span class="line">        __init__.py</span><br><span class="line">    models.py	#定义要在应用程序中管理的数据</span><br><span class="line">    tests.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义模型"><a href="#定义模型" class="headerlink" title="定义模型"></a>定义模型</h3><p>models.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Topic</span>(models.Model):	<span class="comment">#继承Model</span></span><br><span class="line">	<span class="string">&quot;&quot;&quot;用户学习的主题。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment">#CharField:由字符组成的数据，需要告知Django在数据库中预留多少空间</span></span><br><span class="line">	text = models.CharField(max_length=<span class="number">200</span>)</span><br><span class="line">    <span class="comment">#DateTimeField:记录日期和时间的数据</span></span><br><span class="line">	date_added = models.DateTimeField(auto_now_add=<span class="literal">True</span>)</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">		<span class="string">&quot;&quot;&quot;返回模型的字符串表示。&quot;&quot;&quot;</span></span><br><span class="line">		<span class="keyword">return</span> self.text</span><br></pre></td></tr></table></figure>
+
+<h3 id="激活模型"><a href="#激活模型" class="headerlink" title="激活模型"></a>激活模型</h3><p>告诉Django哪些应用程序被安装到了项目中并将协同工作</p>
+<p><code>mysite/mysite/settings.py</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">--snip-- </span><br><span class="line">INSTALLED_APPS = [ </span><br><span class="line">    <span class="string">&#x27;django.contrib.admin&#x27;</span>, </span><br><span class="line">    <span class="string">&#x27;django.contrib.auth&#x27;</span>, </span><br><span class="line">    <span class="string">&#x27;django.contrib.contenttypes&#x27;</span>, </span><br><span class="line">    <span class="string">&#x27;django.contrib.sessions&#x27;</span>, </span><br><span class="line">    <span class="string">&#x27;django.contrib.messages&#x27;</span>, </span><br><span class="line">    <span class="string">&#x27;django.contrib.staticfiles&#x27;</span>, </span><br><span class="line">]</span><br><span class="line">--snip--</span><br></pre></td></tr></table></figure>
+
+<p>我们需要将前面的应用程序添加到此列表中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--snip-- </span><br><span class="line">INSTALLED_APPS = [ </span><br><span class="line">    <span class="comment"># 我的应用程序</span></span><br><span class="line">    <span class="string">&#x27;app_name&#x27;</span>,</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 默认添加的应用程序</span></span><br><span class="line">    --snip--</span><br><span class="line">]</span><br><span class="line">--snip--</span><br></pre></td></tr></table></figure>
+
+<p>接下来，需要让Django修改数据库，使其能够存储与模型Topic相关的信息:</p>
+<p><code>python manage.py makemigrations appname</code></p>
+<p>让Django替我们修改数据库：</p>
+<p><code>python manage.py migrate</code></p>
+<h3 id="Django管理网站"><a href="#Django管理网站" class="headerlink" title="Django管理网站"></a>Django管理网站</h3><h4 id="创建超级用户"><a href="#创建超级用户" class="headerlink" title="创建超级用户"></a>创建超级用户</h4><p>超级用户具备所有权限</p>
+<p>创建超级用户：<code>python manage.py createsuperuser</code></p>
+<h4 id="向管理网站注册模型"><a href="#向管理网站注册模型" class="headerlink" title="向管理网站注册模型"></a>向管理网站注册模型</h4><p>Django会在管理网站中自动添加一些模型，如User和Group，但对于我们创建的模型，必须手动注册</p>
+<p>admin.py:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在这里注册你的模型。</span></span><br></pre></td></tr></table></figure>
+
+<p>项管理网站注册Topic：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Topic	<span class="comment"># 在admin.py所在目录中查找models.py</span></span><br><span class="line"></span><br><span class="line">admin.site.register(Topic)	<span class="comment"># 让Django通过管理网站管理模型</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></p>
+<h4 id="添加主题"><a href="#添加主题" class="headerlink" title="添加主题"></a>添加主题</h4><h3 id="定义模型Entry"><a href="#定义模型Entry" class="headerlink" title="定义模型Entry"></a>定义模型Entry</h3><p>用于在学习笔记中添加条目</p>
+<p>略</p>
+<h3 id="迁移模型Entry"><a href="#迁移模型Entry" class="headerlink" title="迁移模型Entry"></a>迁移模型Entry</h3><p>同上</p>
+<h3 id="向管理网站注册Entry"><a href="#向管理网站注册Entry" class="headerlink" title="向管理网站注册Entry"></a>向管理网站注册Entry</h3><p>同上</p>
+<h3 id="Django-shell"><a href="#Django-shell" class="headerlink" title="Django shell"></a>Django shell</h3><p>通过交互式终端会话以编程方式查看这些数据，可用于测试项目和排除故障</p>
+<p>启动Python解释器：<code>python manage.py shell</code></p>
+<h2 id="创建页面：学习笔记主页"><a href="#创建页面：学习笔记主页" class="headerlink" title="创建页面：学习笔记主页"></a>创建页面：学习笔记主页</h2><p>创建页面的三阶段：</p>
+<ul>
+<li>定义URL</li>
+<li>编写视图</li>
+<li>编写模板</li>
+</ul>
+<h3 id="映射URL"><a href="#映射URL" class="headerlink" title="映射URL"></a>映射URL</h3><p>将基础URL映射到“学习笔记”的主页</p>
+<p>urls.py:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"></span><br><span class="line">urlpatterns = [	<span class="comment"># 包含项目中应用程序的URL</span></span><br><span class="line">    path(<span class="string">&quot;admin/&quot;</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>, include(<span class="string">&#x27;learning_logs.urls&#x27;</span>)), <span class="comment"># 包含模块learning_logs.urls</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>在learning_logs中新建urls.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;定义learning_logs的URL模式。&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views	<span class="comment"># 从当前urls.py模块所在的文件夹导入views.py</span></span><br><span class="line"></span><br><span class="line">app_name = <span class="string">&#x27;learning_logs&#x27;</span></span><br><span class="line">urlpatterns = [</span><br><span class="line">    <span class="comment"># 主页</span></span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>, views.index, name=<span class="string">&#x27;index&#x27;</span>),	</span><br><span class="line">    <span class="comment"># 空字符串（&#x27;&#x27;）与基础URL匹配</span></span><br><span class="line">    <span class="comment"># 指定调用view.py中的index函数</span></span><br><span class="line">    <span class="comment"># 将这个URL 模式的名称指定为index。每当需要提供到这个主页的链接时，都将使用这个名称，而不编写URL。</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="编写视图"><a href="#编写视图" class="headerlink" title="编写视图"></a>编写视图</h3><p>视图函数接受请求中的信息，准备好生成页面所需的数据，再将这些数 据发送给浏览器——这通常是使用定义页面外观的模板实现的。</p>
+<p>函数render()根据视图提供的数据渲染响应</p>
+<h3 id="编写模板"><a href="#编写模板" class="headerlink" title="编写模板"></a>编写模板</h3><p>模板定义页面的外观</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://xoioiiox.github.io">Viola</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://xoioiiox.github.io/2023/07/26/WEB-API%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/">http://xoioiiox.github.io/2023/07/26/WEB-API%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://xoioiiox.github.io" target="_blank">XoioiioX's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/django/">django</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/07/19/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" title="Python学习笔记(二)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python学习笔记(二)</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Viola</div><div class="author-info__description">去新世界冒险和内心作伴</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">建立项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Django%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">Django简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8Django%E4%B8%AD%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.2.</span> <span class="toc-text">在Django中创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.3.</span> <span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.4.</span> <span class="toc-text">查看项目</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text">创建应用程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">定义模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BF%80%E6%B4%BB%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">激活模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Django%E7%AE%A1%E7%90%86%E7%BD%91%E7%AB%99"><span class="toc-number">2.3.</span> <span class="toc-text">Django管理网站</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%B6%85%E7%BA%A7%E7%94%A8%E6%88%B7"><span class="toc-number">2.3.1.</span> <span class="toc-text">创建超级用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%91%E7%AE%A1%E7%90%86%E7%BD%91%E7%AB%99%E6%B3%A8%E5%86%8C%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.3.2.</span> <span class="toc-text">向管理网站注册模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%BB%E9%A2%98"><span class="toc-number">2.3.3.</span> <span class="toc-text">添加主题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8BEntry"><span class="toc-number">2.4.</span> <span class="toc-text">定义模型Entry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%81%E7%A7%BB%E6%A8%A1%E5%9E%8BEntry"><span class="toc-number">2.5.</span> <span class="toc-text">迁移模型Entry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E7%AE%A1%E7%90%86%E7%BD%91%E7%AB%99%E6%B3%A8%E5%86%8CEntry"><span class="toc-number">2.6.</span> <span class="toc-text">向管理网站注册Entry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Django-shell"><span class="toc-number">2.7.</span> <span class="toc-text">Django shell</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2%EF%BC%9A%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%BB%E9%A1%B5"><span class="toc-number">3.</span> <span class="toc-text">创建页面：学习笔记主页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%A0%E5%B0%84URL"><span class="toc-number">3.1.</span> <span class="toc-text">映射URL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E8%A7%86%E5%9B%BE"><span class="toc-number">3.2.</span> <span class="toc-text">编写视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E6%A8%A1%E6%9D%BF"><span class="toc-number">3.3.</span> <span class="toc-text">编写模板</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/26/WEB-API%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/" title="WEB API学习笔记 - 1">WEB API学习笔记 - 1</a><time datetime="2023-07-26T07:52:44.000Z" title="发表于 2023-07-26 15:52:44">2023-07-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/19/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" title="Python学习笔记(二)">Python学习笔记(二)</a><time datetime="2023-07-19T02:39:23.000Z" title="发表于 2023-07-19 10:39:23">2023-07-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/18/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" title="Python学习笔记(一)">Python学习笔记(一)</a><time datetime="2023-07-18T00:16:46.000Z" title="发表于 2023-07-18 08:16:46">2023-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/17/hello-world/" title="Hello World">Hello World</a><time datetime="2023-07-17T01:16:35.120Z" title="发表于 2023-07-17 09:16:35">2023-07-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Viola</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
