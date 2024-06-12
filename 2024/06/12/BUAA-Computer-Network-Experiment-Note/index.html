@@ -120,7 +120,7 @@
                             
                         </div>
                         <h1>[BUAA Computer Network Experiment] Note</h1>
-                        <h2 class="subheading"></h2>
+                        <h2 class="subheading">计算机网络实验笔记</h2>
                         <span class="meta">
                             Posted by xoioiiox on
                             2024-06-12
@@ -806,6 +806,21 @@ ip route-static 0.0.0.0 0.0.0.0 next-hop
 
       <!-- Tabe of Content -->
       <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实验一-网络实验入门"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">实验一 网络实验入门</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#交换机和路由器简介"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">交换机和路由器简介</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#交换机和路由器的基本配置"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">交换机和路由器的基本配置</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#地址转换NAT"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">地址转换NAT</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实验二-数据链路层实验"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">实验二 数据链路层实验</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#以太网链路层帧格式分析"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">以太网链路层帧格式分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#交换机的MAC地址表和端口聚合"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">交换机的MAC地址表和端口聚合</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#VLAN的配置与分析"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">VLAN的配置与分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#广域网数据链路层协议"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">广域网数据链路层协议</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实验三-网络层实验"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">实验三 网络层实验</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#ARP分析"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">ARP分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#ICMP分析"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">ICMP分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#IP分析"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">IP分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#网络层分片实验"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">网络层分片实验</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#VLAN间通信"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">VLAN间通信</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实验四-RIP协议实验"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">实验四 RIP协议实验</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实验五-OSPF协议分析"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">实验五 OSPF协议分析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#OSPF协议概述及基本配置"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">OSPF协议概述及基本配置</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#OSPF协议报文交互过程"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">OSPF协议报文交互过程</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#OSPF协议链路状态描述"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">OSPF协议链路状态描述</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#区域划分及LSA种类"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">区域划分及LSA种类</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#OSPF协议路由的计算"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">OSPF协议路由的计算</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#实验要点"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">实验要点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#实验六-BGP协议实验"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">实验六 BGP协议实验</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#BGP的基本分析"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">BGP的基本分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#BGP状态机的分析"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">BGP状态机的分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#BGP的路由聚合"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">BGP的路由聚合</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#BGP的基本路由属性分析"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">BGP的基本路由属性分析</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#BGP的路由策略"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">BGP的路由策略</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
 
 
       <!-- Sidebar Container -->
