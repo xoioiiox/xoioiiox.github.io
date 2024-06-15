@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="google-site-verification"
+    content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"
+  />
+  <meta name="baidu-site-verification" content="093lY4ziMu" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <meta name="description" content="A hexo theme" />
+  <meta name="keyword" content="dusign, hexo-theme-snail" />
+  <link rel="shortcut icon" href="/img/ironman-draw.png" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <link rel="stylesheet" href="/css/walineRoot.css" />
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+  <title>
+     前端学习路线 - XoioiioX&#39;s Blog 
+  </title>
+
+  <link
+    rel="canonical"
+    href="https://xoioiiox.github.io/2024/06/15/前端学习路线/"
+  />
+
+  <!-- Bootstrap Core CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+  <!-- Custom CSS -->
+   
+<link rel="stylesheet" href="/css/dusign-light.css">
+ 
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+ 
+<link rel="stylesheet" href="/css/font-awesome.css">
+ 
+<link rel="stylesheet" href="/css/toc.css">
+
+  <!-- background effects end -->
+  
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="/css/highlight.css">
+ 
+<link rel="stylesheet" href="/css/widget.css">
+ 
+<link rel="stylesheet" href="/css/rocket.css">
+
+  
+<link rel="stylesheet" href="/css/signature.css">
+ 
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+  <link
+    rel="stylesheet"
+    href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  />
+
+  <!-- photography -->
+  
+<link rel="stylesheet" href="/css/photography.css">
+
+
+  <!-- ga & ba script hoook -->
+  <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('head-bg1.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+                            
+                        </div>
+                        <h1>前端学习路线</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xoioiiox on
+                            2024-06-15
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">6.7k</span> and
+                                Reading Time <span class="post-count">25</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">XoioiioX&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                    <li>
+                        <a href="YOUR_CHINESE_BLOG_URL" target="_blank">Chinese Blog</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <p>一份前端学习路线，希望能引导未来的方向。Just do it!</p>
+<blockquote>
+<p>本文搬运自：<a href="https://yuyuanweb.feishu.cn/wiki/Abldw5WkjidySxkKxU2cQdAtnah" target="_blank" rel="noopener">程序员鱼皮</a></p>
+<p>本站地址：<a href="https://codefather.cn" target="_blank" rel="noopener">https://codefather.cn</a></p>
+</blockquote>
+<p>💂 + 💻 = 👴🏽</p>
+<p>建议先观看视频导读：<a href="https://www.bilibili.com/video/BV1nh411e7oG/" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1nh411e7oG/</a></p>
+<h2 id="路线特点"><a href="#路线特点" class="headerlink" title="路线特点"></a>路线特点</h2><ol>
+<li>一份全面的前端知识点大梳理和汇总</li>
+<li>分阶段学习，每个阶段给出学习目标</li>
+<li>使用符号对知识点的重要程度做了区分，按需学习</li>
+<li>知识点附有描述和资源链接</li>
+<li>提供一份清晰的个人顺序学习路线方法</li>
+<li>提供大量优质学习资源</li>
+</ol>
+<h2 id="符号表"><a href="#符号表" class="headerlink" title="符号表"></a>符号表</h2><p>可根据知识点前的符号按需选学，并获取知识点描述和学习资源。</p>
+<ul>
+<li>⭐️ 必学（追求速成） </li>
+<li>✅ 建议学（重要知识） </li>
+<li>❗ 面试重点 </li>
+<li>❌ 一般没必要学习 </li>
+<li>💬 描述 </li>
+<li>📚 资源 </li>
+<li>🎯 目标 </li>
+</ul>
+<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><ol>
+<li>前言 - 学编程需要的特质</li>
+<li>前端学习七阶段 <ol>
+<li>前端入门</li>
+<li>巩固基础</li>
+<li>前端工程化</li>
+<li>前端优化</li>
+<li>前端生态</li>
+<li>前端求职</li>
+<li>前端未来</li>
+</ol>
+</li>
+<li>我的前端学习路线</li>
+<li>尾声 - 持续学习</li>
+</ol>
+<h2 id="前言-学编程需要的特质"><a href="#前言-学编程需要的特质" class="headerlink" title="前言 - 学编程需要的特质"></a>前言 - 学编程需要的特质</h2><p>相信自己有能力，那么你就真的会有！</p>
+<ul>
+<li>兴趣</li>
+<li>坚持</li>
+<li>付出</li>
+<li>心态</li>
+</ul>
+<h2 id="一、前端入门"><a href="#一、前端入门" class="headerlink" title="一、前端入门"></a>一、前端入门</h2><ul>
+<li>💬 描述：学习前端基础三件套，建议从实战开始，边学边练，培养兴趣，快速入门。 </li>
+<li>📚 资源 <ul>
+<li>freeCodecamp 在线编程：<a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">https://www.freecodecamp.org/</a></li>
+<li>阿里云前端实战学习：<a href="https://edu.aliyun.com/roadmap/frontend" target="_blank" rel="noopener">https://edu.aliyun.com/roadmap/frontend</a></li>
+<li>W3Cschool 编程入门实战：<a href="https://www.w3cschool.cn/codecamp/" target="_blank" rel="noopener">https://www.w3cschool.cn/codecamp/</a></li>
+<li>pink老师前端入门教程：<a href="https://www.bilibili.com/video/BV14J4114768" target="_blank" rel="noopener">https://www.bilibili.com/video/BV14J4114768</a></li>
+</ul>
+</li>
+<li>🎯 目标：了解和实践各语言的基础语法，并能使用开发工具来独立开发一个留言板网站。 </li>
+</ul>
+<h3 id="⭐️-开发工具"><a href="#⭐️-开发工具" class="headerlink" title="⭐️ 开发工具"></a>⭐️ 开发工具</h3><ul>
+<li>💬 描述：工欲善其事，必先利其器。</li>
+</ul>
+<h4 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h4><ul>
+<li>⭐️ Chrome</li>
+<li>✅ Edge</li>
+<li>✅ Firefox</li>
+<li>❌ Opera</li>
+<li>Safari</li>
+</ul>
+<h4 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h4><ul>
+<li>⭐️ VSCode</li>
+<li>✅ WebStorm</li>
+<li>Atom</li>
+<li>⭐️ Sublime Text</li>
+<li>HBuilder X</li>
+<li>记事本</li>
+<li>在线 IDE</li>
+</ul>
+<h4 id="文档笔记"><a href="#文档笔记" class="headerlink" title="文档笔记"></a>文档笔记</h4><ul>
+<li>✅ Markdown 语法</li>
+<li>✅ Typora</li>
+<li>在线笔记 <ul>
+<li>语雀</li>
+<li>腾讯文档</li>
+<li>石墨文档</li>
+<li>印象笔记</li>
+</ul>
+</li>
+<li>Mdnice</li>
+</ul>
+<h3 id="⭐️-HTML"><a href="#⭐️-HTML" class="headerlink" title="⭐️ HTML"></a>⭐️ HTML</h3><ul>
+<li>💬 描述：用于定义一个网页结构的基本技术。 </li>
+<li>📚 资源：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/HTML</a> </li>
+<li>⭐️ 基本语法 </li>
+<li>⭐️ 标签 <ul>
+<li>分区 div</li>
+<li>标题 h1 ~ h6</li>
+<li>段落 p</li>
+<li>图像 img</li>
+<li>列表 ul / ol</li>
+<li>超链接 a</li>
+<li>表单 form</li>
+<li>表格 table</li>
+<li>框架 iframe</li>
+</ul>
+</li>
+<li>⭐️ 属性 </li>
+<li>✅ HTML5 特性 <ul>
+<li>语义化标签</li>
+<li>浏览器支持</li>
+<li>多媒体标签</li>
+<li>Canvas 画布</li>
+<li>❌ 内联 SVG</li>
+<li>本地存储 <ul>
+<li>localStorage</li>
+<li>sessionStorage</li>
+<li>❌ Web SQL</li>
+</ul>
+</li>
+<li>Web Workers</li>
+<li>应用缓存（Cache Manifest）</li>
+<li>无障碍</li>
+</ul>
+</li>
+</ul>
+<h3 id="⭐️-CSS"><a href="#⭐️-CSS" class="headerlink" title="⭐️ CSS"></a>⭐️ CSS</h3><ul>
+<li>💬 描述：层叠样式表，用于设计风格和布局。 </li>
+<li>📚 资源：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS</a> </li>
+<li>⭐️ 基本语法 </li>
+<li>⭐️ 引入方式 <ul>
+<li>行内样式</li>
+<li>内部样式表</li>
+<li>外部样式表</li>
+</ul>
+</li>
+<li>⭐️ 选择器 <ul>
+<li>通用选择器</li>
+<li>标签选择器</li>
+<li>id 选择器</li>
+<li>class 选择器</li>
+<li>属性选择器</li>
+<li>派生选择器 <ul>
+<li>后代选择器</li>
+<li>子元素选择器</li>
+<li>相邻兄弟选择器</li>
+</ul>
+</li>
+<li>组合选择器</li>
+<li>伪选择器</li>
+<li>选择器优先级</li>
+</ul>
+</li>
+<li>⭐️ 属性 <ul>
+<li>单位 <ul>
+<li>px</li>
+<li>em</li>
+<li>rem</li>
+<li>vw</li>
+<li>vh</li>
+</ul>
+</li>
+<li>背景</li>
+<li>文本</li>
+<li>字体</li>
+<li>列表</li>
+<li>表格</li>
+</ul>
+</li>
+<li>⭐️ 文档流 <ul>
+<li>标准流</li>
+<li>浮动流</li>
+<li>定位流</li>
+</ul>
+</li>
+<li>⭐️ 内联元素 / 块状元素 </li>
+<li>⭐️ 盒子模型 <ul>
+<li>content</li>
+<li>padding</li>
+<li>border</li>
+<li>margin</li>
+</ul>
+</li>
+<li>⭐️ 浮动 <ul>
+<li>设置浮动 float</li>
+<li>清除浮动 clear</li>
+</ul>
+</li>
+<li>⭐️ 定位 <ul>
+<li>static</li>
+<li>absolute</li>
+<li>fixed</li>
+<li>relative</li>
+<li>sticky</li>
+</ul>
+</li>
+<li>⭐️ 层叠规则 </li>
+<li>❗ BFC 和 IFC 机制 </li>
+<li>CSS3 <ul>
+<li>⭐️ 响应式布局 <ul>
+<li>媒体查询</li>
+<li>Flex 布局</li>
+<li>Grid 布局</li>
+<li>瀑布流</li>
+</ul>
+</li>
+<li>动画</li>
+<li>过渡</li>
+<li>渐变</li>
+<li>背景</li>
+<li>边框</li>
+<li>圆角</li>
+<li>字体</li>
+<li>2D / 3D 转换</li>
+</ul>
+</li>
+</ul>
+<h3 id="⭐️-JavaScript"><a href="#⭐️-JavaScript" class="headerlink" title="⭐️ JavaScript"></a>⭐️ JavaScript</h3><ul>
+<li>💬 描述：具有函数优先的轻量级，解释型或即时编译型的编程语言。 </li>
+<li>📚 资源：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript</a> </li>
+<li>⭐️ 基本语法 </li>
+<li>⭐️ 数据类型 <ul>
+<li>值类型 <ul>
+<li>字符串 String</li>
+<li>数组 Number</li>
+<li>布尔 Boolean</li>
+<li>空值 Null</li>
+<li>未定义 Undefined</li>
+<li>Symbol</li>
+</ul>
+</li>
+<li>引用类型 <ul>
+<li>对象 Object</li>
+<li>数组 Array</li>
+<li>函数 Function</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>✅ 数据类型转换 </li>
+<li>✅ 函数 <ul>
+<li>⭐️ 概念</li>
+<li>⭐️ 自定义函数</li>
+<li>调用方式 <ul>
+<li>⭐️ 全局调用</li>
+<li>构造函数调用</li>
+<li>⭐️ 函数方法调用</li>
+<li>apply</li>
+<li>call</li>
+</ul>
+</li>
+<li>✅❗ 闭包</li>
+</ul>
+</li>
+<li>✅ 对象 <ul>
+<li>概念</li>
+<li>this</li>
+<li>原型链和继承</li>
+<li>常用对象 <ul>
+<li>数字 Number</li>
+<li>字符串 String 对象</li>
+<li>日期 Date 对象</li>
+<li>数组 Array</li>
+<li>布尔 Boolean</li>
+<li>算数 Math</li>
+</ul>
+</li>
+<li>自定义对象</li>
+</ul>
+</li>
+<li>✅❗ 作用域（作用域链） </li>
+<li>✅ BOM API </li>
+<li>⭐️ DOM API </li>
+<li>⭐️ JSON </li>
+<li>⭐️ Ajax </li>
+<li>✅ JavaScript 执行机制 </li>
+</ul>
+<h4 id="✅-ES6-特性"><a href="#✅-ES6-特性" class="headerlink" title="✅ ES6+ 特性"></a>✅ ES6+ 特性</h4><ul>
+<li>💬 描述：新引入的 JavaScript 语法特性。 </li>
+<li>📚 资源：ES6 入门教程 <a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener">https://es6.ruanyifeng.com/</a> </li>
+<li>let 和 const </li>
+<li>变量解构赋值 </li>
+<li>对象扩展和新增方法 </li>
+<li>Symbol </li>
+<li>Set 和 Map 数据结构 </li>
+<li>⭐️❗ Promise &amp; async / await 异步编程 </li>
+<li>Generator 函数异步编程 </li>
+</ul>
+<h2 id="二、巩固基础"><a href="#二、巩固基础" class="headerlink" title="二、巩固基础"></a>二、巩固基础</h2><ul>
+<li>💬 描述：学习前端、计算机、软件开发相关基础知识，并复习巩固上阶段学到的前端三件套。 </li>
+<li>📚 资源 <ul>
+<li>《JavaScript 高级程序设计》：<a href="https://t.zsxq.com/0eKWGbTgL" target="_blank" rel="noopener">https://t.zsxq.com/0eKWGbTgL</a></li>
+<li>《JavaScript 忍者秘籍》：<a href="https://www.code-nav.cn/rd/?rid=28ee4e3e606b16c00e3c5b18609e3dc2" target="_blank" rel="noopener">https://www.code-nav.cn/rd/?rid=28ee4e3e606b16c00e3c5b18609e3dc2</a></li>
+</ul>
+</li>
+<li>🎯 目标：熟悉前端三件套语法，尤其是 JavaScript，并了解互联网、域名、浏览器、服务器等，扎实前端程序员的基本功，为下面进入实战开发做准备。 </li>
+</ul>
+<h3 id="前端基础知识"><a href="#前端基础知识" class="headerlink" title="前端基础知识"></a>前端基础知识</h3><ul>
+<li>✅ 互联网 </li>
+<li>⭐️ 域名 </li>
+<li>⭐️ DNS </li>
+<li>⭐️ 服务器 </li>
+<li>✅ 浏览器 <ul>
+<li>浏览器 DOM 事件流 / 事件委托</li>
+<li>⭐️ 浏览器加载顺序</li>
+<li>⭐️ 浏览器渲染过程</li>
+<li>浏览器事件循环</li>
+<li>浏览器同源策略</li>
+<li>❗ 跨域解决方案</li>
+<li>浏览器缓存</li>
+<li>控制台调试技巧</li>
+</ul>
+</li>
+<li>✅ HTTP <ul>
+<li>❗ HTTP 请求过程</li>
+<li>常见 HTTP 协议 <ul>
+<li>HTTP 1.0</li>
+<li>⭐️ HTTP 1.1</li>
+<li>HTTP 2</li>
+<li>HTTP 3</li>
+</ul>
+</li>
+<li>⭐️ HTTP 请求类别</li>
+<li>⭐️ 常见状态码 <ul>
+<li>1xx 信息</li>
+<li>2xx 成功</li>
+<li>3xx 重定向</li>
+<li>4xx 客户端错误</li>
+<li>5xx 服务器错误</li>
+</ul>
+</li>
+<li>WebSocket</li>
+<li>⭐️ Cookie</li>
+<li>Session</li>
+<li>⭐️ HTTPS</li>
+</ul>
+</li>
+</ul>
+<h3 id="计算机基础"><a href="#计算机基础" class="headerlink" title="计算机基础"></a>计算机基础</h3><h4 id="✅-算法和数据结构"><a href="#✅-算法和数据结构" class="headerlink" title="✅ 算法和数据结构"></a>✅ 算法和数据结构</h4><ul>
+<li>⭐️ 时间 / 空间复杂度分析 </li>
+<li>数据结构 <ul>
+<li>数组</li>
+<li>字符串</li>
+<li>队列</li>
+<li>栈</li>
+<li>链表</li>
+<li>集合</li>
+<li>哈希表</li>
+<li>二叉树</li>
+</ul>
+</li>
+<li>算法 <ul>
+<li>排序</li>
+<li>双指针</li>
+<li>查找</li>
+<li>分治</li>
+<li>动态规划</li>
+<li>递归</li>
+<li>回溯</li>
+<li>贪心</li>
+<li>位运算</li>
+<li>DFS</li>
+<li>BFS</li>
+<li>图</li>
+</ul>
+</li>
+</ul>
+<h4 id="✅-计算机网络"><a href="#✅-计算机网络" class="headerlink" title="✅ 计算机网络"></a>✅ 计算机网络</h4><ul>
+<li>HTTP 协议</li>
+<li>网络模型</li>
+<li>UDP / TCP 协议</li>
+</ul>
+<h4 id="✅-操作系统"><a href="#✅-操作系统" class="headerlink" title="✅ 操作系统"></a>✅ 操作系统</h4><ul>
+<li>进程、线程</li>
+<li>进程 / 线程间通讯方式</li>
+<li>进程调度算法</li>
+<li>进程 / 线程状态</li>
+<li>死锁</li>
+<li>内存管理</li>
+</ul>
+<h3 id="软件开发基础"><a href="#软件开发基础" class="headerlink" title="软件开发基础"></a>软件开发基础</h3><h4 id="✅-设计模式"><a href="#✅-设计模式" class="headerlink" title="✅ 设计模式"></a>✅ 设计模式</h4><ul>
+<li>单例模式</li>
+<li>代理模式</li>
+<li>工厂模式</li>
+<li>装饰者模式</li>
+<li>观察者模式</li>
+<li>策略模式</li>
+<li>门面模式</li>
+</ul>
+<h4 id="⭐️-Git-版本控制"><a href="#⭐️-Git-版本控制" class="headerlink" title="⭐️ Git 版本控制"></a>⭐️ Git 版本控制</h4><ul>
+<li>常用命令</li>
+</ul>
+<h4 id="✅-Linux-服务器"><a href="#✅-Linux-服务器" class="headerlink" title="✅ Linux 服务器"></a>✅ Linux 服务器</h4><ul>
+<li>常用命令</li>
+</ul>
+<h4 id="✅-正则表达式"><a href="#✅-正则表达式" class="headerlink" title="✅ 正则表达式"></a>✅ 正则表达式</h4><h2 id="三、前端工程化"><a href="#三、前端工程化" class="headerlink" title="三、前端工程化"></a>三、前端工程化</h2><ul>
+<li>💬 描述：前端工程化是使用软件工程的技术和方法来进行前端的开发流程、技术、工具、经验等规范化、标准化，其主要目的为了提高开发过程中的开发效率，减少不必要的重复工作时间。 </li>
+<li>📚 资源 <ul>
+<li>什么是前端工程化？<a href="https://www.zhihu.com/question/433854153/answer/1713597311" target="_blank" rel="noopener">https://www.zhihu.com/question/433854153/answer/1713597311</a></li>
+</ul>
+</li>
+<li>🎯 目标：至少学会一门主流的前端开发框架（Vue / React），并配合脚手架、组件库、工具等从 0 开始独立搭建并开发一个完整的前端网站，可以试着仿一些知名站点。要求遵循企业开发规范，将项目代码提交到代码仓库中，并独立发布上线，供他人访问。此外，建议抓住机会参与一些团队项目，感受团队开发模式和前端工程化的优势。 </li>
+</ul>
+<h3 id="⭐️-研发流程"><a href="#⭐️-研发流程" class="headerlink" title="⭐️ 研发流程"></a>⭐️ 研发流程</h3><ol>
+<li>技术选型</li>
+<li>初始化</li>
+<li>开发</li>
+<li>本地测试</li>
+<li>代码提交</li>
+<li>编译、打包、构建</li>
+<li>部署</li>
+<li>集成测试</li>
+<li>发布上线</li>
+<li>监控运维</li>
+</ol>
+<h3 id="⭐️-代码托管"><a href="#⭐️-代码托管" class="headerlink" title="⭐️ 代码托管"></a>⭐️ 代码托管</h3><ul>
+<li>💬 描述：集中存储、备份你的代码，还能和团队成员协作开发。 </li>
+<li>⭐️ GitHub </li>
+<li>Gitee </li>
+<li>GitLab </li>
+</ul>
+<h3 id="✅-Node-JS"><a href="#✅-Node-JS" class="headerlink" title="✅ Node.JS"></a>✅ Node.JS</h3><ul>
+<li>💬 描述：一个开源与跨平台的 JavaScript 运行时环境。 它是一个可用于几乎任何项目的流行工具！</li>
+<li>📚 资源 <ul>
+<li>Node.js 官方教程：<a href="http://nodejs.cn/learn" target="_blank" rel="noopener">http://nodejs.cn/learn</a></li>
+<li>Node.js 入门：<a href="https://cnodejs.org/getstart" target="_blank" rel="noopener">https://cnodejs.org/getstart</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="⭐️-包管理"><a href="#⭐️-包管理" class="headerlink" title="⭐️ 包管理"></a>⭐️ 包管理</h4><ul>
+<li>💬 描述：用于安装 Node.js 的扩展、工具等。 </li>
+<li>⭐️ npm </li>
+<li>⭐️ yarn </li>
+<li>❌ bower </li>
+<li>✅ npx </li>
+</ul>
+<h4 id="开发框架"><a href="#开发框架" class="headerlink" title="开发框架"></a>开发框架</h4><ul>
+<li>Express</li>
+<li>Koa</li>
+<li>Egg</li>
+</ul>
+<h3 id="开发框架-1"><a href="#开发框架-1" class="headerlink" title="开发框架"></a>开发框架</h3><ul>
+<li>💬 描述：解决特定的问题,提高<em>开发</em>效率、简化我们的代码复杂度。</li>
+</ul>
+<h4 id="⭐️-CSS-框架"><a href="#⭐️-CSS-框架" class="headerlink" title="⭐️ CSS 框架"></a>⭐️ CSS 框架</h4><ul>
+<li>✅ BootStrap</li>
+<li>⭐️ Tailwind CSS</li>
+</ul>
+<h4 id="⭐️-JavaScript-框架"><a href="#⭐️-JavaScript-框架" class="headerlink" title="⭐️ JavaScript 框架"></a>⭐️ JavaScript 框架</h4><h5 id="⭐️-Vue"><a href="#⭐️-Vue" class="headerlink" title="⭐️ Vue"></a>⭐️ Vue</h5><ul>
+<li>Vue Router</li>
+<li>Vuex</li>
+</ul>
+<h5 id="⭐️-React"><a href="#⭐️-React" class="headerlink" title="⭐️ React"></a>⭐️ React</h5><ul>
+<li>React DOM</li>
+<li>React Router</li>
+<li>Redux</li>
+<li>MobX</li>
+<li>React Hooks</li>
+</ul>
+<h5 id="❌-Angular"><a href="#❌-Angular" class="headerlink" title="❌ Angular"></a>❌ Angular</h5><ul>
+<li>RxJS</li>
+<li>NgRx</li>
+</ul>
+<h5 id="✅-Svelte"><a href="#✅-Svelte" class="headerlink" title="✅ Svelte"></a>✅ Svelte</h5><h5 id="✅-UmiJS"><a href="#✅-UmiJS" class="headerlink" title="✅ UmiJS"></a>✅ UmiJS</h5><h3 id="封装库"><a href="#封装库" class="headerlink" title="封装库"></a>封装库</h3><h4 id="⭐️-组件库"><a href="#⭐️-组件库" class="headerlink" title="⭐️ 组件库"></a>⭐️ 组件库</h4><ul>
+<li>✅ LayUI</li>
+<li>⭐️ ElementUI（Vue）</li>
+<li>✅ VantUI（Vue）</li>
+<li>⭐️ Ant Design（React）</li>
+<li>Material UI</li>
+</ul>
+<h4 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h4><ul>
+<li>✅ AntV</li>
+<li>Apache ECharts</li>
+<li>HighCharts</li>
+<li>D3.js</li>
+</ul>
+<h4 id="组件（插件）"><a href="#组件（插件）" class="headerlink" title="组件（插件）"></a>组件（插件）</h4><ul>
+<li>富文本编辑器</li>
+<li>弹窗</li>
+<li>轮播图</li>
+</ul>
+<h4 id="工具库"><a href="#工具库" class="headerlink" title="工具库"></a>工具库</h4><ul>
+<li>✅ jQuery</li>
+<li>✅ Lodash</li>
+<li>✅ Axios</li>
+<li>时间处理 Moment.js</li>
+</ul>
+<h4 id="动效库"><a href="#动效库" class="headerlink" title="动效库"></a>动效库</h4><ul>
+<li>✅ Animate.css</li>
+<li>Ant Motion</li>
+</ul>
+<h4 id="字体图标库"><a href="#字体图标库" class="headerlink" title="字体图标库"></a>字体图标库</h4><ul>
+<li>⭐️ IconFont</li>
+<li>IconPark</li>
+<li>Font Awesome</li>
+</ul>
+<h3 id="⭐️-脚手架"><a href="#⭐️-脚手架" class="headerlink" title="⭐️ 脚手架"></a>⭐️ 脚手架</h3><ul>
+<li>💬 描述：快速生成新项目的目录模板，提升开发效率和开发舒适性。 </li>
+<li>📚 资源：<a href="https://www.jianshu.com/p/25ce8cf2e6a7" target="_blank" rel="noopener">https://www.jianshu.com/p/25ce8cf2e6a7</a> </li>
+<li>Vue CLI </li>
+<li>create-react-app </li>
+<li>✅ Yeoman </li>
+</ul>
+<h3 id="⭐️-前端架构设计"><a href="#⭐️-前端架构设计" class="headerlink" title="⭐️ 前端架构设计"></a>⭐️ 前端架构设计</h3><ul>
+<li>💬 描述：一系列工具和流程的集合，旨在提升前端代码的质量，并实现高效可持续的工作流。 </li>
+<li>模块化 </li>
+<li>组件化 </li>
+<li>✅ MVVM </li>
+<li>设计原则 </li>
+<li>⭐️ SPA 单页应用 </li>
+<li>⭐️ 多页应用 </li>
+<li>✅ 前端路由 </li>
+<li>PWA </li>
+<li>有损服务 </li>
+</ul>
+<h4 id="✅-服务端渲染"><a href="#✅-服务端渲染" class="headerlink" title="✅ 服务端渲染"></a>✅ 服务端渲染</h4><ul>
+<li>💬 描述：在服务端渲染 HTML 页面的模式。 </li>
+<li>📚 资源：<a href="https://www.zhihu.com/question/379563505" target="_blank" rel="noopener">https://www.zhihu.com/question/379563505</a> </li>
+<li>Next.js（React） </li>
+<li>Nuxt.js（Vue） </li>
+<li>❌ Universal（Angular） </li>
+</ul>
+<h4 id="BFF"><a href="#BFF" class="headerlink" title="BFF"></a>BFF</h4><ul>
+<li>💬 描述：Backend For Frontend（服务于前端的后端），就是服务器设计 API 时会考虑前端的使用，并在服务端直接进行业务逻辑的处理。 </li>
+<li>📚 资源：<a href="https://www.jianshu.com/p/eb1875c62ad3" target="_blank" rel="noopener">https://www.jianshu.com/p/eb1875c62ad3</a> </li>
+<li>GraphQL </li>
+</ul>
+<h4 id="✅-微前端"><a href="#✅-微前端" class="headerlink" title="✅ 微前端"></a>✅ 微前端</h4><ul>
+<li>💬 描述：将前端应用分解成一些更小、更简单的能够独立开发、测试、部署的小块，从而解决庞大的一整块后端服务带来的变更与扩展方面的限制。 </li>
+<li>📚 资源：<a href="https://zhuanlan.zhihu.com/p/96464401" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/96464401</a> </li>
+<li>qiankun </li>
+<li>single-spa </li>
+</ul>
+<h3 id="CSS-in-JS"><a href="#CSS-in-JS" class="headerlink" title="CSS in JS"></a>CSS in JS</h3><ul>
+<li>💬 描述：用 JavaScript 来写 CSS。 </li>
+<li>📚 资源：<a href="http://www.ruanyifeng.com/blog/2017/04/css_in_js.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2017/04/css_in_js.html</a> </li>
+<li>内联样式 </li>
+<li>声明样式 </li>
+<li>引入样式 </li>
+</ul>
+<h4 id="⭐️-CSS-模块化"><a href="#⭐️-CSS-模块化" class="headerlink" title="⭐️ CSS 模块化"></a>⭐️ CSS 模块化</h4><ul>
+<li>⭐️ CSS Modules</li>
+<li>✅ styled-components</li>
+<li>✅ Styled JSX</li>
+<li>Emotion</li>
+</ul>
+<h3 id="✅-开发调试"><a href="#✅-开发调试" class="headerlink" title="✅ 开发调试"></a>✅ 开发调试</h3><ul>
+<li>💬 描述：本地开发时热更新，提升开发效率。 </li>
+<li>webpack-dev-server </li>
+<li>serve </li>
+</ul>
+<h4 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h4><ul>
+<li>💬 描述：将内网外网通过 nat 隧道打通，让内网的网站、数据让外网可以访问。 </li>
+<li>Ngrok </li>
+<li>NATAPP </li>
+</ul>
+<h3 id="⭐️-CSS-预编译"><a href="#⭐️-CSS-预编译" class="headerlink" title="⭐️ CSS 预编译"></a>⭐️ CSS 预编译</h3><ul>
+<li>💬 描述：使用新的扩展语言以增强 CSS 的能力，并通过预编译的方式将其转换为浏览器认识的 CSS 代码。 </li>
+<li>⭐️ SASS </li>
+<li>✅ PostCSS </li>
+<li>Stylus </li>
+<li>❌ LESS </li>
+</ul>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h4 id="测试分类"><a href="#测试分类" class="headerlink" title="测试分类"></a>测试分类</h4><ul>
+<li>⭐️ UT 单元测试</li>
+<li>SIT 系统集成测试</li>
+<li>E2E 端到端测试</li>
+<li>UAT 用户验收测试</li>
+</ul>
+<h4 id="✅-Mock"><a href="#✅-Mock" class="headerlink" title="✅ Mock"></a>✅ Mock</h4><ul>
+<li>💬 描述：通过随机数据，模拟各种场景，增加单元测试的真实性。 </li>
+<li>Mock.js </li>
+</ul>
+<h4 id="✅-测试框架"><a href="#✅-测试框架" class="headerlink" title="✅ 测试框架"></a>✅ 测试框架</h4><ul>
+<li>✅ Jest </li>
+<li>Enzyme </li>
+<li>✅ Puppeteer（Headless Browser） </li>
+<li>Mocha </li>
+<li>Jasmine </li>
+</ul>
+<h3 id="✅-代码质量"><a href="#✅-代码质量" class="headerlink" title="✅ 代码质量"></a>✅ 代码质量</h3><h4 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h4><ul>
+<li>💬 描述：依照规范写出的代码会更加合理。 </li>
+<li>📚 资源：Airbnb 代码规范 <a href="https://github.com/BingKui/javascript-zh" target="_blank" rel="noopener">https://github.com/BingKui/javascript-zh</a> </li>
+<li>CSS Style Guide </li>
+<li>JavaScript Style Guide </li>
+</ul>
+<h4 id="类型校验"><a href="#类型校验" class="headerlink" title="类型校验"></a>类型校验</h4><ul>
+<li>TypeScript</li>
+</ul>
+<h4 id="代码检查"><a href="#代码检查" class="headerlink" title="代码检查"></a>代码检查</h4><ul>
+<li>ESLint</li>
+<li>StyleLint</li>
+</ul>
+<h4 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h4><ul>
+<li>💬 描述：根据配置自动格式化代码，统一格式。 </li>
+<li>Prettier </li>
+</ul>
+<h4 id="提交规范"><a href="#提交规范" class="headerlink" title="提交规范"></a>提交规范</h4><ul>
+<li>约定式提交</li>
+</ul>
+<h4 id="提交检查"><a href="#提交检查" class="headerlink" title="提交检查"></a>提交检查</h4><ul>
+<li>💬 描述：在提交代码时触发一些操作，比如检查代码的风格等。 </li>
+<li>pre-commit </li>
+<li>husky </li>
+</ul>
+<h3 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h3><h4 id="自动化构建"><a href="#自动化构建" class="headerlink" title="自动化构建"></a>自动化构建</h4><ul>
+<li>💬 描述：按照配置好的流程自动打包构建项目，提高团队的开发效率，降低项目的维护难度。 </li>
+<li>Gulp </li>
+<li>✅ npm script </li>
+<li>Grunt </li>
+</ul>
+<h4 id="打包工具"><a href="#打包工具" class="headerlink" title="打包工具"></a>打包工具</h4><ul>
+<li>💬 描述：将各种零散的📚 资源文件打包为可在浏览器等环境运行的代码。 </li>
+<li>⭐️ Webpack </li>
+<li>✅ Rollup </li>
+<li>✅ Vite </li>
+<li>Parcel </li>
+<li>Snowpack </li>
+</ul>
+<h3 id="CI-CD"><a href="#CI-CD" class="headerlink" title="CI / CD"></a>CI / CD</h3><ul>
+<li>💬 描述：通过在应用开发阶段引入自动化来频繁向客户交付应用。</li>
+<li>GitLab CI</li>
+<li>✅ Jenkins</li>
+</ul>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><h4 id="⭐️-Web-服务器"><a href="#⭐️-Web-服务器" class="headerlink" title="⭐️ Web 服务器"></a>⭐️ Web 服务器</h4><h5 id="⭐️-Nginx"><a href="#⭐️-Nginx" class="headerlink" title="⭐️ Nginx"></a>⭐️ Nginx</h5><ul>
+<li>💬 描述：高性能的 HTTP 和反向代理 web 服务器。 </li>
+<li>📚 资源：腾讯云动手实验室 <a href="https://cloud.tencent.com/developer/labs/gallery" target="_blank" rel="noopener">https://cloud.tencent.com/developer/labs/gallery</a> </li>
+<li>反向代理 </li>
+<li>解决跨域 </li>
+<li>改写请求 </li>
+</ul>
+<h5 id="✅-Apache"><a href="#✅-Apache" class="headerlink" title="✅ Apache"></a>✅ Apache</h5><h4 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h4><h5 id="✅-Docker"><a href="#✅-Docker" class="headerlink" title="✅ Docker"></a>✅ Docker</h5><ul>
+<li>💬 描述：容器是一个标准化的软件单元，它将代码及其所有依赖关系打包，以便应用程序从一个计算环境可靠快速地运行到另一个计算环境。Docker容器镜像是一个轻量的独立的可执行的软件包。包含程序运行的时候所需的一切：代码，运行时间，系统工具，系统库和设置。 </li>
+<li>📚 资源：Docker 从入门到实践 <a href="https://vuepress.mirror.docker-practice.com/" target="_blank" rel="noopener">https://vuepress.mirror.docker-practice.com/</a> </li>
+<li>Dockerfile </li>
+</ul>
+<h5 id="Kubernetes"><a href="#Kubernetes" class="headerlink" title="Kubernetes"></a>Kubernetes</h5><h4 id="部署策略"><a href="#部署策略" class="headerlink" title="部署策略"></a>部署策略</h4><ul>
+<li>全量发布</li>
+<li>蓝绿部署</li>
+<li>滚动发布</li>
+<li>灰度发布</li>
+</ul>
+<h3 id="监控告警"><a href="#监控告警" class="headerlink" title="监控告警"></a>监控告警</h3><ul>
+<li>前端埋点</li>
+<li>错误监控</li>
+<li>性能监控</li>
+<li>行为监控</li>
+</ul>
+<h2 id="四、前端优化"><a href="#四、前端优化" class="headerlink" title="四、前端优化"></a>四、前端优化</h2><ul>
+<li>💬 描述：通过分析和优化手段，提高网站的性能和用户体验。 </li>
+<li>🎯 目标：实践前端优化方法，从多个方面优化自己做过的项目，最好能将优化后的网站与原网站进行对比，得到一些数据和体验上的明显提升。 </li>
+</ul>
+<h3 id="✅-性能优化"><a href="#✅-性能优化" class="headerlink" title="✅ 性能优化"></a>✅ 性能优化</h3><h4 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h4><ul>
+<li>💬 描述：用于衡量一个 Web 页面的性能。 </li>
+<li>📚 资源：<a href="https://juejin.cn/post/6844904153869713416" target="_blank" rel="noopener">https://juejin.cn/post/6844904153869713416</a> </li>
+<li>FP（First Paint） <ul>
+<li>💬 描述：从开始加载到浏览器首次绘制像素到屏幕上的时间，也就是页面在屏幕上首次发生视觉变化的时间。</li>
+</ul>
+</li>
+<li>FCP（First Contentful Paint） <ul>
+<li>💬 描述：浏览器首次绘制来自 DOM 的内容的时间。</li>
+</ul>
+</li>
+<li>FMP（First Meaningful Paint） <ul>
+<li>💬 描述：页面的主要内容绘制到屏幕上的时间。</li>
+</ul>
+</li>
+<li>FSP（First Screen Paint） <ul>
+<li>💬 描述：页面从开始加载到首屏内容全部绘制完成的时间，用户可以看到首屏的全部内容。</li>
+</ul>
+</li>
+<li>TTI（Time to Interactive） <ul>
+<li>💬 描述：表示网页第一次完全达到可交互状态的时间点，浏览器已经可以持续性的响应用户的输入。</li>
+</ul>
+</li>
+</ul>
+<h4 id="优化手段"><a href="#优化手段" class="headerlink" title="优化手段"></a>优化手段</h4><ul>
+<li>性能监控 <ul>
+<li>Performance API</li>
+</ul>
+</li>
+<li>样式优化 </li>
+<li>JavaScript 优化 <ul>
+<li>防抖</li>
+<li>节流</li>
+</ul>
+</li>
+<li>代码分割 </li>
+<li>📚 资源压缩 </li>
+<li>打包优化 </li>
+<li>服务器优化 </li>
+<li>缓存优化 <ul>
+<li>Service Worker</li>
+</ul>
+</li>
+<li>动画性能 </li>
+<li>dns-prefetch </li>
+<li>Lazy loading </li>
+<li>优化启动性能 <ul>
+<li>异步化</li>
+</ul>
+</li>
+<li>渲染优化 </li>
+<li>网络优化 </li>
+<li>移动端性能优化 </li>
+<li>✅ CDN <ul>
+<li>💬 描述：内容分发网络，是构建在现有网络基础之上的智能虚拟网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。</li>
+<li>📚 资源：BootCDN <a href="https://www.bootcdn.cn/" target="_blank" rel="noopener">https://www.bootcdn.cn/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><ul>
+<li>设计系统</li>
+<li>骨架屏</li>
+</ul>
+<h3 id="✅-兼容性"><a href="#✅-兼容性" class="headerlink" title="✅ 兼容性"></a>✅ 兼容性</h3><h4 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h4><ul>
+<li>normalize.css</li>
+<li>html5shiv.js</li>
+<li>respond.js</li>
+<li>Babel</li>
+<li>Polyfill</li>
+</ul>
+<h4 id="屏幕分辨率兼容性"><a href="#屏幕分辨率兼容性" class="headerlink" title="屏幕分辨率兼容性"></a>屏幕分辨率兼容性</h4><h4 id="跨平台兼容性"><a href="#跨平台兼容性" class="headerlink" title="跨平台兼容性"></a>跨平台兼容性</h4><h3 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h3><ul>
+<li>💬 描述：搜索引擎优化，利用搜索引擎的规则提高网站在有关搜索引擎内的自然排名。 </li>
+<li>📚 资源：百度搜索📚 资源平台 <a href="https://ziyuan.baidu.com/cooperateresource/index" target="_blank" rel="noopener">https://ziyuan.baidu.com/cooperateresource/index</a> </li>
+<li>robots.txt </li>
+<li>description </li>
+<li>keywords </li>
+<li>SiteMap </li>
+<li>HTML 标签优化 </li>
+<li>站内链接建设 </li>
+<li>友情链接 </li>
+</ul>
+<h3 id="✅-安全"><a href="#✅-安全" class="headerlink" title="✅ 安全"></a>✅ 安全</h3><ul>
+<li>⭐️ XSS</li>
+<li>CSRF</li>
+<li>反爬虫</li>
+<li>SQL 注入</li>
+<li>DDoS</li>
+</ul>
+<h2 id="五、前端生态"><a href="#五、前端生态" class="headerlink" title="五、前端生态"></a>五、前端生态</h2><ul>
+<li>💬 描述：如今，前端领域的范围越来越广，出现了更多前端工程师需要了解和关注的技术。 </li>
+<li>🎯 目标：能用学到的前端技术去做更多的事情，比如开发个人博客、文档网站、小程序、APP 等。 </li>
+</ul>
+<h3 id="⭐️-静态站点构建"><a href="#⭐️-静态站点构建" class="headerlink" title="⭐️ 静态站点构建"></a>⭐️ 静态站点构建</h3><h4 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h4><ul>
+<li>React Static</li>
+</ul>
+<h4 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h4><ul>
+<li>✅ Gatsby.js</li>
+<li>✅ Docusaurus</li>
+<li>Hugo</li>
+<li>Hexo</li>
+</ul>
+<h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><ul>
+<li>JekyII</li>
+<li>⭐️ Docsify</li>
+<li>VuePress</li>
+<li>✅ Dumi</li>
+</ul>
+<h3 id="✅-大前端"><a href="#✅-大前端" class="headerlink" title="✅ 大前端"></a>✅ 大前端</h3><p>💬 描述：前端技术的融合更加紧密，应用的领域也更加广泛，前端领域的内容呈现多样化，除了网站外，还可以用前端技术跨平台开发 Android、iOS、小程序、虚拟现实、增强现实等。</p>
+<h4 id="移动应用"><a href="#移动应用" class="headerlink" title="移动应用"></a>移动应用</h4><ul>
+<li>Hybrid</li>
+<li>WebView</li>
+<li>React Native</li>
+<li>Flutter</li>
+</ul>
+<h4 id="移动应用打包"><a href="#移动应用打包" class="headerlink" title="移动应用打包"></a>移动应用打包</h4><ul>
+<li>Weex</li>
+<li>Cordova</li>
+<li>Phonegap</li>
+<li>Ionic</li>
+</ul>
+<h4 id="桌面应用"><a href="#桌面应用" class="headerlink" title="桌面应用"></a>桌面应用</h4><ul>
+<li>Electron</li>
+<li>NW.js</li>
+<li>Proton Native</li>
+</ul>
+<h4 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h4><ul>
+<li>原生</li>
+<li>WebView</li>
+</ul>
+<h4 id="跨端开发框架"><a href="#跨端开发框架" class="headerlink" title="跨端开发框架"></a>跨端开发框架</h4><ul>
+<li>✅ uni-app</li>
+<li>✅ Taro</li>
+<li>Flutter</li>
+<li>Chameleon</li>
+<li>Wepy</li>
+<li>Rax</li>
+</ul>
+<h4 id="移动端调试"><a href="#移动端调试" class="headerlink" title="移动端调试"></a>移动端调试</h4><ul>
+<li>Chrome Dev Tools</li>
+<li>Android Simulator</li>
+<li>IOS Simulator</li>
+</ul>
+<h3 id="✅-Serverless"><a href="#✅-Serverless" class="headerlink" title="✅ Serverless"></a>✅ Serverless</h3><ul>
+<li>💬 描述：一种构建和管理基于微服务架构的完整流程，允许你在服务部署级别而不是服务器部署级别来管理你的应用部署，你甚至可以管理某个具体功能或端口的部署，这就能让开发者快速迭代，更快速地开发软件。</li>
+</ul>
+<h3 id="✅-云开发"><a href="#✅-云开发" class="headerlink" title="✅ 云开发"></a>✅ 云开发</h3><ul>
+<li>💬 描述：云端一体化的后端云服务 ，采用 Serverless 架构，免去了移动应用构建中繁琐的服务器搭建和运维。同时云开发提供的静态托管、命令行工具（CLI）、Flutter SDK 等能力降低了应用开发的门槛。使用云开发可以构建完整的小程序/小游戏、H5、Web、移动 App 等应用。 </li>
+<li>✅ 腾讯云云开发 </li>
+<li>阿里云云开发 </li>
+</ul>
+<h3 id="低代码"><a href="#低代码" class="headerlink" title="低代码"></a>低代码</h3><ul>
+<li>💬 描述：无需编码（零代码）或通过少量代码就可以快速生成应用程序的开发平台。通过可视化进行应用程序开发的方法，使具有不同经验水平的开发人员可以通过图形化的用户界面，使用拖拽组件和模型驱动的逻辑来创建网页和移动应用程序。 </li>
+<li>腾讯云低码 </li>
+<li>阿里宜搭 </li>
+</ul>
+<h2 id="六、前端求职"><a href="#六、前端求职" class="headerlink" title="六、前端求职"></a>六、前端求职</h2><ul>
+<li>💬 描述：求职是一个漫长的过程，建议拉长战线，尽早准备。 </li>
+<li>🎯 目标：找到理想的工作。 </li>
+</ul>
+<h3 id="简历"><a href="#简历" class="headerlink" title="简历"></a>简历</h3><ul>
+<li>老鱼简历：<a href="https://laoyujianli.com/" target="_blank" rel="noopener">https://laoyujianli.com/</a>（1 分钟帮你生成精美的个人简历）</li>
+</ul>
+<h3 id="面试题库"><a href="#面试题库" class="headerlink" title="面试题库"></a>面试题库</h3><ul>
+<li>编程导航精选面试题汇总：<a href="https://yuyuanweb.feishu.cn/wiki/CmFywXs0Oi0MS9kU3yocJugFn2e" target="_blank" rel="noopener">https://yuyuanweb.feishu.cn/wiki/CmFywXs0Oi0MS9kU3yocJugFn2e</a></li>
+<li>前端面试每日 3+1：<a href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener">https://github.com/haizlin/fe-interview</a></li>
+<li>React 面试题目 &amp; 题解：<a href="https://github.com/sudheerj/reactjs-interview-questions" target="_blank" rel="noopener">https://github.com/sudheerj/reactjs-interview-questions</a></li>
+</ul>
+<h3 id="面经"><a href="#面经" class="headerlink" title="面经"></a>面经</h3><ul>
+<li>编程导航面经汇总：<a href="https://yuyuanweb.feishu.cn/wiki/PLHrwcEPCiJcxXk7Ki4csRoJn2f" target="_blank" rel="noopener">https://yuyuanweb.feishu.cn/wiki/PLHrwcEPCiJcxXk7Ki4csRoJn2f</a></li>
+</ul>
+<h2 id="七、前端未来"><a href="#七、前端未来" class="headerlink" title="七、前端未来"></a>七、前端未来</h2><ul>
+<li>💬 描述：前端未来可能的发展趋势和热门技术。 </li>
+<li>🎯 目标：关注前沿，持续进步。 </li>
+<li>WebAssembly </li>
+<li>智能 UI </li>
+<li>React Server Component </li>
+<li>CSS Houdini </li>
+</ul>
+<h3 id="WebComponents"><a href="#WebComponents" class="headerlink" title="WebComponents"></a>WebComponents</h3><ul>
+<li>HTML templates（HTML模板）</li>
+<li>Custom elements（自定义元素）</li>
+<li>Shadow DOM（影子DOM）</li>
+</ul>
+<h2 id="我的前端学习路线"><a href="#我的前端学习路线" class="headerlink" title="我的前端学习路线"></a>我的前端学习路线</h2><p>虽然上面整理的学习路线知识点非常多，但是大家也别太担心，其实按照一定顺序和方法来学习，并不会很难，聊聊我的学习经历。</p>
+<h3 id="1-快速入门，培养兴趣"><a href="#1-快速入门，培养兴趣" class="headerlink" title="1. 快速入门，培养兴趣"></a>1. 快速入门，培养兴趣</h3><p>刚开始学习前端时，一定要以培养兴趣、快速入门为目标。我入门前端时，由于没有基础、啥都不懂，因此选择在线实战教程网站来学习，跟着教程案例一行行把代码敲下来，实时浏览显示效果，很轻松地就把 HTML、CSS、JavaScript 的语法基础过了一遍。但是这时，我对看过的知识点没有什么印象，基本是看了就忘，当我想要自己写一个网站，也根本无从下手。</p>
+<p>于是，我开始试着死记硬背代码，结果发现背了之后还是不会写。那干脆一不做二不休，直接打开编辑器和教程网站，把之前在线实战时敲过的代码复制粘贴到编辑器中，然后再修改保存，到浏览器中打开文件。这样虽然要在编辑器和浏览器中来回切换，但起码能看到自己的网页文件运行的效果了。后来，我利用浏览器开发者工具提升了自己开发网站的调试效率，敲出的代码达不到满意的效果时，就再去查，再改，再浏览，最后终于完成了一个留言板网站！</p>
+<p>通过这件事，我明白了一个道理，既然记不住知识，那就先别强行记忆，上手多写，忘了就去查不就好了？不要担心自己知识不够做不出来，只要你去试，都一定能实现。</p>
+<h3 id="2-多看多写，巩固基础"><a href="#2-多看多写，巩固基础" class="headerlink" title="2. 多看多写，巩固基础"></a>2. 多看多写，巩固基础</h3><p>在这种操作下，我虽然能使用基础三件套开发简易网站了，但做的很慢，还老出问题。于是，我开始完整地看了几本前端入门和项目实战书籍，有三件套入门的，也有响应式网站设计的，还有 JavaScript 综合讲解的，以及一套完整的视频教程，通过这些来复习巩固之前学过的知识，打好了基础，并且了解了更多实战教程上没见到的知识。</p>
+<p>看书和视频的过程中，我跟着做了几个简易的网站，也是边看边做。在这之后，我发现自己渐渐地能够脱离文档来写网站了！</p>
+<h3 id="3-框架学习，学以致用"><a href="#3-框架学习，学以致用" class="headerlink" title="3. 框架学习，学以致用"></a>3. 框架学习，学以致用</h3><p>但是，总感觉开发网站时，什么都要自己写，重复的代码写一大堆，很麻烦。于是，我试着上网搜了解决这些问题的方法，发现可以用组件库减少重复编写 HTML 和 CSS 代码，于是学了 LayUI，其实和之前一样的，就是打开官网找到要用的组件，然后复制到项目中修改就行了，写的多了竟然还真记住了一些（虽然这个没必要记）。</p>
+<p>界面和样式代码简化了，但是 JavaScript 写的我依旧头疼。于是我决定进入下一个阶段的学习，当时先看了本书叫《锋利的 jQuery》来学习 jQuery，学会之后使用它趁热打铁做了几个网站，发现的确能大大简化繁琐的 JavaScript DOM 操作，让我尝到了甜头，又有了继续学习前端的动力。</p>
+<p>在那之后大概半年，我开始学习主流前端框架 Vue，也是跟着视频教程学，并且结合 ElementUI 组件库开发了一个响应式网站。不得不说，习惯了用原生 JavaScript 和 jQuery 开发后，再去用 Vue 开发，真的是爽飞了，小有成就感。</p>
+<h3 id="4-根据需要，自主学习"><a href="#4-根据需要，自主学习" class="headerlink" title="4. 根据需要，自主学习"></a>4. 根据需要，自主学习</h3><p>在那之后，我就是通过不断地做项目来积累经验，既然编程知识太多学不完，那我就随需随学，逐渐拓宽自己的知识面。举个例子，我要做一个移动端 H5 页面，那就去搜 Vue 的移动端组件库，学会了 MintUI、VantUI 等；项目中要处理日期，那我就去搜日期处理库，学会了 Moment.js；项目重复文件和代码太多，我就去网上搜一些组件化、模块化的最佳实践；项目代码太大、加载太慢，我就去网上搜一些前端压缩、性能优化的方式；要把开发好的项目变成 APP，那我就去网上搜到了 Cordova 等打包工具；跟其他同学一起做项目时比较混乱、开发效率低，我就去搜了一些代码规范、前端工程化等；遇到 Bug 时，也是自己去网上搜索解决方案，并且还要看看有没有知识点是我遗漏的，我会再去弥补学习。通过不断实践、不断遇到问题和自主解决问题，我始终保持着学习的积极性，学到了越来越多前端的知识，并通过归纳总结来加深印象。</p>
+<h3 id="5-渐入佳境，拓宽视野"><a href="#5-渐入佳境，拓宽视野" class="headerlink" title="5. 渐入佳境，拓宽视野"></a>5. 渐入佳境，拓宽视野</h3><p>在那之后，我学前端技术非常快了，像 React、TypeScript、Redux、Dva、Umi、Lerna 等等都随用随学，随学随用。此外，我不仅仅关注前端网页开发本身，还同时关注前端的生态和发展，学习了微前端、Serverless、云开发、低代码等技术，因此个人的能力提升也很大。如今在鹅厂工作中也是，面对各种不同技术栈的前端项目，我都能迎难而上，毕竟不会就学嘛！</p>
+<p>哦，写的渐入佳境，我都忘了，自己是一名后端工程师，还搁这儿吹牛逼呢（ 所以本路线难免会有不专业的地方，请大家见谅~</p>
+<h3 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h3><p>总结一下，学前端的路线其实就一句话：基础三件套 =&gt; 巩固基础 =&gt; 学习框架 =&gt; 多做项目 =&gt; 按需学习 =&gt; 拓宽视野。还有一个学任何编程技术都要注意的点，全程多敲代码！多敲代码！多敲代码！</p>
+<h2 id="尾声-持续学习"><a href="#尾声-持续学习" class="headerlink" title="尾声 - 持续学习"></a>尾声 - 持续学习</h2><h3 id="前端职业发展的几个阶段"><a href="#前端职业发展的几个阶段" class="headerlink" title="前端职业发展的几个阶段"></a>前端职业发展的几个阶段</h3><ol>
+<li>作为一名合格的前端开发，首先你要能干活、能通过 Vue 之类的前端框架完成公司的需求，比如还原设计稿、开发交互、搭建项目的初始框架（架构）、开发内部的组件库（基建）等等，重点是要学会如何和后端系统进行对接（前后端联调），有时候也需要完成一些简单的服务端开发，比如使用 Node 搭建中间层 / 接入层（BFF）。 </li>
+<li>这就需要你除了学习前端基础三件套之外，还要熟练使用一个开发框架 Vue / React 以及前端工程化的一些工具 / 轮子，比如打包工具用 webpack、性能分析工具、SSR 等），可以帮助你更好地设计项目、开发项目，从而应对需求的变化、使项目更易于维护、可扩展。 </li>
+<li>如果要成为高级前端开发，要了解常用框架 / 工具的运行原理和机制。最好有一个自己擅长 / 专攻的领域，比如低代码、Web IDE、可视化、性能优化、Web Assembly 等等，并且积极参与开源项目和公开分享。</li>
+</ol>
+<p>随着学习知识的不断丰富和深入，要学会主动到网上关注和汲取知识、了解前端的发展和新技术趋势。比如看书、掘金、InfoQ 等技术网站，或者关注某个领域的大佬、参加一些大会等。</p>
+<h3 id="优秀前端人的特质"><a href="#优秀前端人的特质" class="headerlink" title="优秀前端人的特质"></a>优秀前端人的特质</h3><ul>
+<li>深厚的功底 </li>
+<li>良好的编码习惯 </li>
+<li>发现问题的洞察力 </li>
+<li>思维灵活，善于思考 </li>
+<li>追求技术，紧跟前沿 </li>
+<li>有创造力，有行动力 </li>
+<li>追求用户体验 </li>
+<li>时刻保持好奇 </li>
+<li>全栈意识 </li>
+<li>解决问题的能力强 </li>
+<li>懂得合作和高效沟通 </li>
+<li>重视工作，同样重视生活 </li>
+<li>责任心和全局观 </li>
+<li>个人的进步能带动团队的进步 </li>
+</ul>
+<h3 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h3><ul>
+<li>编程导航（包含以下所有资源，强烈推荐 👍）：<a href="https://www.code-nav.cn" target="_blank" rel="noopener">https://www.code-nav.cn</a></li>
+<li>freeCodecamp 在线编程：<a href="https://learn.freecodecamp.one/" target="_blank" rel="noopener">https://learn.freecodecamp.one/</a></li>
+<li>阿里云前端实战学习：<a href="https://edu.aliyun.com/roadmap/frontend" target="_blank" rel="noopener">https://edu.aliyun.com/roadmap/frontend</a></li>
+<li>W3Cschool 编程入门实战：<a href="https://www.w3cschool.cn/codecamp/" target="_blank" rel="noopener">https://www.w3cschool.cn/codecamp/</a></li>
+<li>腾讯云动手实验室：<a href="https://cloud.tencent.com/developer/labs/gallery" target="_blank" rel="noopener">https://cloud.tencent.com/developer/labs/gallery</a></li>
+<li>pink老师前端入门教程：<a href="https://www.bilibili.com/video/BV14J4114768" target="_blank" rel="noopener">https://www.bilibili.com/video/BV14J4114768</a></li>
+<li>MDN 前端文档：<a href="https://developer.mozilla.org/zh-CN" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN</a></li>
+<li>Node.js 入门：<a href="https://cnodejs.org/getstart" target="_blank" rel="noopener">https://cnodejs.org/getstart</a></li>
+<li>前端清单：<a href="https://cheatsheets.devtool.tech/" target="_blank" rel="noopener">https://cheatsheets.devtool.tech/</a></li>
+<li>前端小课：<a href="https://lefex.github.io/" target="_blank" rel="noopener">https://lefex.github.io/</a></li>
+<li>被删的前端游乐场：<a href="http://www.godbasin.com/" target="_blank" rel="noopener">http://www.godbasin.com/</a></li>
+<li>《ES6 入门教程》：<a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener">https://es6.ruanyifeng.com/</a></li>
+<li>谷歌 Web 开发者：<a href="https://developers.google.com/web" target="_blank" rel="noopener">https://developers.google.com/web</a></li>
+<li>JavaScript 明星项目：<a href="https://risingstars.js.org/2020/zh" target="_blank" rel="noopener">https://risingstars.js.org/2020/zh</a></li>
+<li>Best of JS：<a href="https://bestofjs.org/" target="_blank" rel="noopener">https://bestofjs.org/</a></li>
+<li>Codewars：<a href="https://www.codewars.com/?language=javascript" target="_blank" rel="noopener">https://www.codewars.com/?language=javascript</a></li>
+<li>Vue.js examples：<a href="https://vuejsexamples.com/" target="_blank" rel="noopener">https://vuejsexamples.com/</a></li>
+</ul>
+<h3 id="前端资讯"><a href="#前端资讯" class="headerlink" title="前端资讯"></a>前端资讯</h3><ul>
+<li>掘金资讯：<a href="https://juejin.cn/news" target="_blank" rel="noopener">https://juejin.cn/news</a></li>
+<li>InfoQ：<a href="https://www.infoq.cn/topic/Front-end" target="_blank" rel="noopener">https://www.infoq.cn/topic/Front-end</a></li>
+<li>daily.dev：<a href="https://daily.dev/" target="_blank" rel="noopener">https://daily.dev/</a></li>
+</ul>
+<h3 id="技术博客"><a href="#技术博客" class="headerlink" title="技术博客"></a>技术博客</h3><ul>
+<li>掘金：<a href="https://juejin.cn/frontend" target="_blank" rel="noopener">https://juejin.cn/frontend</a> </li>
+<li>腾讯前端 IMWEB：<a href="http://imweb.io" target="_blank" rel="noopener">http://imweb.io</a> </li>
+<li>腾讯 Web 前端团队 Alloy Team：<a href="http://www.alloyteam.com" target="_blank" rel="noopener">http://www.alloyteam.com</a> </li>
+<li>淘宝前端团队：<a href="http://taobaofed.org" target="_blank" rel="noopener">http://taobaofed.org</a> </li>
+<li>百度 Web 前端研发部：<a href="http://fex.baidu.com" target="_blank" rel="noopener">http://fex.baidu.com</a> </li>
+<li>京东凹凸实验室：<a href="https://aotu.io" target="_blank" rel="noopener">https://aotu.io</a> </li>
+<li>360 奇舞团：<a href="https://75team.com" target="_blank" rel="noopener">https://75team.com</a> </li>
+<li>七牛团队技术博客：<a href="http://blog.qiniu.com" target="_blank" rel="noopener">http://blog.qiniu.com</a> </li>
+<li>有赞技术团队：<a href="https://tech.youzan.com/tag/front-end/" target="_blank" rel="noopener">https://tech.youzan.com/tag/front-end/</a> </li>
+<li>百度 EFE Tech：<a href="https://efe.baidu.com/" target="_blank" rel="noopener">https://efe.baidu.com/</a> </li>
+<li>css-tricks：<a href="https://css-tricks.com/archives" target="_blank" rel="noopener">https://css-tricks.com/archives</a> </li>
+<li>web.dev：<a href="https://web.dev/blog/" target="_blank" rel="noopener">https://web.dev/blog/</a> </li>
+</ul>
+<h3 id="学习要点"><a href="#学习要点" class="headerlink" title="学习要点"></a>学习要点</h3><ul>
+<li>前期学习以培养兴趣为主，不要过于追求深层理解。</li>
+<li>前端学习不能靠死记硬背，要多敲代码、多做项目实践。</li>
+<li>不要急于求成，踏实积累才是硬道理。</li>
+</ul>
+
+
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+           
+          <li class="next">
+            <a
+              href="/2024/06/12/BUAA-Computer-Network-Experiment-Note/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="[BUAA Computer Network Experiment] Notes"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
+        </ul>
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
+        
+        <!-- tip end -->
+
+        <!-- Music start-->
+        
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#路线特点"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">路线特点</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#符号表"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">符号表</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#大纲"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">大纲</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#前言-学编程需要的特质"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">前言 - 学编程需要的特质</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#一、前端入门"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">一、前端入门</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-开发工具"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">⭐️ 开发工具</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#浏览器"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">浏览器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#编辑器"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">编辑器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#文档笔记"><span class="toc-nav-number">5.1.3.</span> <span class="toc-nav-text">文档笔记</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-HTML"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">⭐️ HTML</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-CSS"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">⭐️ CSS</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-JavaScript"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">⭐️ JavaScript</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-ES6-特性"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">✅ ES6+ 特性</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#二、巩固基础"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">二、巩固基础</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#前端基础知识"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">前端基础知识</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#计算机基础"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">计算机基础</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-算法和数据结构"><span class="toc-nav-number">6.2.1.</span> <span class="toc-nav-text">✅ 算法和数据结构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-计算机网络"><span class="toc-nav-number">6.2.2.</span> <span class="toc-nav-text">✅ 计算机网络</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-操作系统"><span class="toc-nav-number">6.2.3.</span> <span class="toc-nav-text">✅ 操作系统</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#软件开发基础"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">软件开发基础</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-设计模式"><span class="toc-nav-number">6.3.1.</span> <span class="toc-nav-text">✅ 设计模式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#⭐️-Git-版本控制"><span class="toc-nav-number">6.3.2.</span> <span class="toc-nav-text">⭐️ Git 版本控制</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-Linux-服务器"><span class="toc-nav-number">6.3.3.</span> <span class="toc-nav-text">✅ Linux 服务器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-正则表达式"><span class="toc-nav-number">6.3.4.</span> <span class="toc-nav-text">✅ 正则表达式</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#三、前端工程化"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">三、前端工程化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-研发流程"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">⭐️ 研发流程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-代码托管"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">⭐️ 代码托管</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-Node-JS"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">✅ Node.JS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#⭐️-包管理"><span class="toc-nav-number">7.3.1.</span> <span class="toc-nav-text">⭐️ 包管理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#开发框架"><span class="toc-nav-number">7.3.2.</span> <span class="toc-nav-text">开发框架</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#开发框架-1"><span class="toc-nav-number">7.4.</span> <span class="toc-nav-text">开发框架</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#⭐️-CSS-框架"><span class="toc-nav-number">7.4.1.</span> <span class="toc-nav-text">⭐️ CSS 框架</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#⭐️-JavaScript-框架"><span class="toc-nav-number">7.4.2.</span> <span class="toc-nav-text">⭐️ JavaScript 框架</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#⭐️-Vue"><span class="toc-nav-number">7.4.2.1.</span> <span class="toc-nav-text">⭐️ Vue</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#⭐️-React"><span class="toc-nav-number">7.4.2.2.</span> <span class="toc-nav-text">⭐️ React</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#❌-Angular"><span class="toc-nav-number">7.4.2.3.</span> <span class="toc-nav-text">❌ Angular</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#✅-Svelte"><span class="toc-nav-number">7.4.2.4.</span> <span class="toc-nav-text">✅ Svelte</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#✅-UmiJS"><span class="toc-nav-number">7.4.2.5.</span> <span class="toc-nav-text">✅ UmiJS</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#封装库"><span class="toc-nav-number">7.5.</span> <span class="toc-nav-text">封装库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#⭐️-组件库"><span class="toc-nav-number">7.5.1.</span> <span class="toc-nav-text">⭐️ 组件库</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#数据可视化"><span class="toc-nav-number">7.5.2.</span> <span class="toc-nav-text">数据可视化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#组件（插件）"><span class="toc-nav-number">7.5.3.</span> <span class="toc-nav-text">组件（插件）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#工具库"><span class="toc-nav-number">7.5.4.</span> <span class="toc-nav-text">工具库</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#动效库"><span class="toc-nav-number">7.5.5.</span> <span class="toc-nav-text">动效库</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#字体图标库"><span class="toc-nav-number">7.5.6.</span> <span class="toc-nav-text">字体图标库</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-脚手架"><span class="toc-nav-number">7.6.</span> <span class="toc-nav-text">⭐️ 脚手架</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-前端架构设计"><span class="toc-nav-number">7.7.</span> <span class="toc-nav-text">⭐️ 前端架构设计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-服务端渲染"><span class="toc-nav-number">7.7.1.</span> <span class="toc-nav-text">✅ 服务端渲染</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#BFF"><span class="toc-nav-number">7.7.2.</span> <span class="toc-nav-text">BFF</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-微前端"><span class="toc-nav-number">7.7.3.</span> <span class="toc-nav-text">✅ 微前端</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CSS-in-JS"><span class="toc-nav-number">7.8.</span> <span class="toc-nav-text">CSS in JS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#⭐️-CSS-模块化"><span class="toc-nav-number">7.8.1.</span> <span class="toc-nav-text">⭐️ CSS 模块化</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-开发调试"><span class="toc-nav-number">7.9.</span> <span class="toc-nav-text">✅ 开发调试</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#内网穿透"><span class="toc-nav-number">7.9.1.</span> <span class="toc-nav-text">内网穿透</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-CSS-预编译"><span class="toc-nav-number">7.10.</span> <span class="toc-nav-text">⭐️ CSS 预编译</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#测试"><span class="toc-nav-number">7.11.</span> <span class="toc-nav-text">测试</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#测试分类"><span class="toc-nav-number">7.11.1.</span> <span class="toc-nav-text">测试分类</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-Mock"><span class="toc-nav-number">7.11.2.</span> <span class="toc-nav-text">✅ Mock</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#✅-测试框架"><span class="toc-nav-number">7.11.3.</span> <span class="toc-nav-text">✅ 测试框架</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-代码质量"><span class="toc-nav-number">7.12.</span> <span class="toc-nav-text">✅ 代码质量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#开发规范"><span class="toc-nav-number">7.12.1.</span> <span class="toc-nav-text">开发规范</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#类型校验"><span class="toc-nav-number">7.12.2.</span> <span class="toc-nav-text">类型校验</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#代码检查"><span class="toc-nav-number">7.12.3.</span> <span class="toc-nav-text">代码检查</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#代码风格"><span class="toc-nav-number">7.12.4.</span> <span class="toc-nav-text">代码风格</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#提交规范"><span class="toc-nav-number">7.12.5.</span> <span class="toc-nav-text">提交规范</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#提交检查"><span class="toc-nav-number">7.12.6.</span> <span class="toc-nav-text">提交检查</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#构建工具"><span class="toc-nav-number">7.13.</span> <span class="toc-nav-text">构建工具</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#自动化构建"><span class="toc-nav-number">7.13.1.</span> <span class="toc-nav-text">自动化构建</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#打包工具"><span class="toc-nav-number">7.13.2.</span> <span class="toc-nav-text">打包工具</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CI-CD"><span class="toc-nav-number">7.14.</span> <span class="toc-nav-text">CI &#x2F; CD</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#部署"><span class="toc-nav-number">7.15.</span> <span class="toc-nav-text">部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#⭐️-Web-服务器"><span class="toc-nav-number">7.15.1.</span> <span class="toc-nav-text">⭐️ Web 服务器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#⭐️-Nginx"><span class="toc-nav-number">7.15.1.1.</span> <span class="toc-nav-text">⭐️ Nginx</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#✅-Apache"><span class="toc-nav-number">7.15.1.2.</span> <span class="toc-nav-text">✅ Apache</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#容器"><span class="toc-nav-number">7.15.2.</span> <span class="toc-nav-text">容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#✅-Docker"><span class="toc-nav-number">7.15.2.1.</span> <span class="toc-nav-text">✅ Docker</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Kubernetes"><span class="toc-nav-number">7.15.2.2.</span> <span class="toc-nav-text">Kubernetes</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#部署策略"><span class="toc-nav-number">7.15.3.</span> <span class="toc-nav-text">部署策略</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#监控告警"><span class="toc-nav-number">7.16.</span> <span class="toc-nav-text">监控告警</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#四、前端优化"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">四、前端优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-性能优化"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">✅ 性能优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#性能指标"><span class="toc-nav-number">8.1.1.</span> <span class="toc-nav-text">性能指标</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#优化手段"><span class="toc-nav-number">8.1.2.</span> <span class="toc-nav-text">优化手段</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#用户体验"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text">用户体验</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-兼容性"><span class="toc-nav-number">8.3.</span> <span class="toc-nav-text">✅ 兼容性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#浏览器兼容性"><span class="toc-nav-number">8.3.1.</span> <span class="toc-nav-text">浏览器兼容性</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#屏幕分辨率兼容性"><span class="toc-nav-number">8.3.2.</span> <span class="toc-nav-text">屏幕分辨率兼容性</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#跨平台兼容性"><span class="toc-nav-number">8.3.3.</span> <span class="toc-nav-text">跨平台兼容性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SEO"><span class="toc-nav-number">8.4.</span> <span class="toc-nav-text">SEO</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-安全"><span class="toc-nav-number">8.5.</span> <span class="toc-nav-text">✅ 安全</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#五、前端生态"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">五、前端生态</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#⭐️-静态站点构建"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text">⭐️ 静态站点构建</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#开发"><span class="toc-nav-number">9.1.1.</span> <span class="toc-nav-text">开发</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#博客"><span class="toc-nav-number">9.1.2.</span> <span class="toc-nav-text">博客</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#文档"><span class="toc-nav-number">9.1.3.</span> <span class="toc-nav-text">文档</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-大前端"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text">✅ 大前端</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#移动应用"><span class="toc-nav-number">9.2.1.</span> <span class="toc-nav-text">移动应用</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#移动应用打包"><span class="toc-nav-number">9.2.2.</span> <span class="toc-nav-text">移动应用打包</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#桌面应用"><span class="toc-nav-number">9.2.3.</span> <span class="toc-nav-text">桌面应用</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#小程序"><span class="toc-nav-number">9.2.4.</span> <span class="toc-nav-text">小程序</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#跨端开发框架"><span class="toc-nav-number">9.2.5.</span> <span class="toc-nav-text">跨端开发框架</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#移动端调试"><span class="toc-nav-number">9.2.6.</span> <span class="toc-nav-text">移动端调试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-Serverless"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text">✅ Serverless</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#✅-云开发"><span class="toc-nav-number">9.4.</span> <span class="toc-nav-text">✅ 云开发</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#低代码"><span class="toc-nav-number">9.5.</span> <span class="toc-nav-text">低代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#六、前端求职"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">六、前端求职</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#简历"><span class="toc-nav-number">10.1.</span> <span class="toc-nav-text">简历</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#面试题库"><span class="toc-nav-number">10.2.</span> <span class="toc-nav-text">面试题库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#面经"><span class="toc-nav-number">10.3.</span> <span class="toc-nav-text">面经</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#七、前端未来"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">七、前端未来</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#WebComponents"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">WebComponents</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#我的前端学习路线"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">我的前端学习路线</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-快速入门，培养兴趣"><span class="toc-nav-number">12.1.</span> <span class="toc-nav-text">1. 快速入门，培养兴趣</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-多看多写，巩固基础"><span class="toc-nav-number">12.2.</span> <span class="toc-nav-text">2. 多看多写，巩固基础</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-框架学习，学以致用"><span class="toc-nav-number">12.3.</span> <span class="toc-nav-text">3. 框架学习，学以致用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-根据需要，自主学习"><span class="toc-nav-number">12.4.</span> <span class="toc-nav-text">4. 根据需要，自主学习</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-渐入佳境，拓宽视野"><span class="toc-nav-number">12.5.</span> <span class="toc-nav-text">5. 渐入佳境，拓宽视野</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-总结"><span class="toc-nav-number">12.6.</span> <span class="toc-nav-text">6. 总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#尾声-持续学习"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">尾声 - 持续学习</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#前端职业发展的几个阶段"><span class="toc-nav-number">13.1.</span> <span class="toc-nav-text">前端职业发展的几个阶段</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#优秀前端人的特质"><span class="toc-nav-number">13.2.</span> <span class="toc-nav-text">优秀前端人的特质</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#学习资源"><span class="toc-nav-number">13.3.</span> <span class="toc-nav-text">学习资源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#前端资讯"><span class="toc-nav-number">13.4.</span> <span class="toc-nav-text">前端资讯</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技术博客"><span class="toc-nav-number">13.5.</span> <span class="toc-nav-text">技术博客</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#学习要点"><span class="toc-nav-number">13.6.</span> <span class="toc-nav-text">学习要点</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#前端"
+              title="前端"
+              >前端</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
+
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/xoioiiox">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; xoioiiox 2024 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/xoioiiox" target="_blank" rel="noopener">
+                        <i>xoioiiox</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://xoioiiox.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;❤️&#34;,&#34;🥥&#34;,&#34;🍅&#34;,&#34;🧀&#34;,&#34;🍨&#34;,&#34;🍇&#34;,&#34;🍩&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+</body>
+
+</html>
