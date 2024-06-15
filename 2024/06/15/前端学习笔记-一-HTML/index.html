@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="google-site-verification"
+    content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"
+  />
+  <meta name="baidu-site-verification" content="093lY4ziMu" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <meta name="description" content="A hexo theme" />
+  <meta name="keyword" content="dusign, hexo-theme-snail" />
+  <link rel="shortcut icon" href="/img/guide.png" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <link rel="stylesheet" href="/css/walineRoot.css" />
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+  <title>
+     前端学习笔记(一) HTML - XoioiioX&#39;s Blog 
+  </title>
+
+  <link
+    rel="canonical"
+    href="https://xoioiiox.github.io/2024/06/15/前端学习笔记-一-HTML/"
+  />
+
+  <!-- Bootstrap Core CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+  <!-- Custom CSS -->
+   
+<link rel="stylesheet" href="/css/dusign-light.css">
+ 
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+ 
+<link rel="stylesheet" href="/css/font-awesome.css">
+ 
+<link rel="stylesheet" href="/css/toc.css">
+
+  <!-- background effects end -->
+  
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="/css/highlight.css">
+ 
+<link rel="stylesheet" href="/css/widget.css">
+ 
+<link rel="stylesheet" href="/css/rocket.css">
+
+  
+<link rel="stylesheet" href="/css/signature.css">
+ 
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+  <link
+    rel="stylesheet"
+    href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  />
+
+  <!-- photography -->
+  
+<link rel="stylesheet" href="/css/photography.css">
+
+
+  <!-- ga & ba script hoook -->
+  <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+                            
+                        </div>
+                        <h1>前端学习笔记(一) HTML</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xoioiiox on
+                            2024-06-15
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">2.2k</span> and
+                                Reading Time <span class="post-count">8</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">XoioiioX&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                    <li>
+                        <a href="YOUR_CHINESE_BLOG_URL" target="_blank">Chinese Blog</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <p>HTML（Hypertext Markup Language）是由不同<u>元素</u>组成的标记语言。可应用于文本片段，使其具有不同含义，将文档结构化为逻辑块，并且可以将图片，影像等内容嵌入到页面中。</p>
+<blockquote>
+<p>XML: Extensible Markup Language</p>
+</blockquote>
+<h2 id="HTML介绍"><a href="#HTML介绍" class="headerlink" title="HTML介绍"></a>HTML介绍</h2><h3 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h3><p>由开始标签、内容和结束标签组成，例如<p>hello</p></p>
+<ul>
+<li>嵌套元素</li>
+<li>块级元素和内联元素<ul>
+<li>块级元素：以块的形式展现，与前后内容均不在一行上。块级元素不会嵌套在内联元素中，但可能嵌套在另一个块级元素中。例如<code>&lt;p&gt;</code></li>
+<li>内联元素（行级元素）：通常出现在块级元素中，并环绕文档内容的一小部分。不会导致文本换行。例如<code>&lt;em&gt;</code></li>
+</ul>
+</li>
+<li>空元素<ul>
+<li>只有一个标签，通常用于插入一下东西，例如<code>&lt;img&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>元素可以拥有属性，例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"editor-note"</span>&gt;</span>My cat is very grumpy<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>属性必须包含：空格、属性名、属性值</p>
+<ul>
+<li>布尔属性<ul>
+<li>没有值的属性，如<code>disabled</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="剖析HTML文档"><a href="#剖析HTML文档" class="headerlink" title="剖析HTML文档"></a>剖析HTML文档</h3><h4 id="文档结构"><a href="#文档结构" class="headerlink" title="文档结构"></a>文档结构</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span> <span class="comment">&lt;!--声明文档类型--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span> <span class="comment">&lt;!--根元素--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="comment">&lt;!--不显示--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span> <span class="comment">&lt;!--元数据--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>我的测试站点<span class="tag">&lt;/<span class="name">title</span>&gt;</span> <span class="comment">&lt;!--页面标题--&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span> <span class="comment">&lt;!--显示内容--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是我的页面<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="HTML中的空白"><a href="#HTML中的空白" class="headerlink" title="HTML中的空白"></a>HTML中的空白</h4><p>HTML解释器会将连续出现的空白字符（空格与换行）减少为一个单独的空格符。</p>
+<h4 id="HTML中的特殊字符"><a href="#HTML中的特殊字符" class="headerlink" title="HTML中的特殊字符"></a>HTML中的特殊字符</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>原义字符</th>
+<th>等价字符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>&amp; lt ;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&amp; gt ;</td>
+</tr>
+<tr>
+<td>“</td>
+<td>&amp; quot ;</td>
+</tr>
+<tr>
+<td>‘</td>
+<td>&amp; apos ;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>&amp; amp ;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="HTML头部"><a href="#HTML头部" class="headerlink" title="HTML头部"></a>HTML头部</h3><h4 id="添加标题"><a href="#添加标题" class="headerlink" title="添加标题"></a>添加标题</h4><p><code>&lt;title&gt;</code>元素 </p>
+<h4 id="元数据：-lt-meta-gt-元素"><a href="#元数据：-lt-meta-gt-元素" class="headerlink" title="元数据：&lt;meta&gt;元素"></a>元数据：<code>&lt;meta&gt;</code>元素</h4><p>元数据就是描述数据的数据。</p>
+<p><strong>指定文档中的字符编码</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>utf-8</code>是一个通用字符集</p>
+</blockquote>
+<p><strong>添加作者和描述</strong></p>
+<ul>
+<li><code>name</code>指定<code>meta</code>元素的类型</li>
+<li><code>content</code>指定实际的元数据内容</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"Chris Mills"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">  <span class="attr">name</span>=<span class="string">"description"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">content</span>=<span class="string">"The MDN Web Docs Learning Area aims to provide</span></span></span><br><span class="line"><span class="tag"><span class="string">complete beginners to the Web with all they need to know to get</span></span></span><br><span class="line"><span class="tag"><span class="string">started with developing web sites and applications."</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="在HTML中应用CSS和JavaScript"><a href="#在HTML中应用CSS和JavaScript" class="headerlink" title="在HTML中应用CSS和JavaScript"></a>在HTML中应用CSS和JavaScript</h4><p>分别使用<code>&lt;link&gt;</code>元素和<code>&lt;script&gt;</code>元素</p>
+<ul>
+<li><code>&lt;link&gt;</code>元素包含两个属性，<code>rel=&quot;stylesheet&quot;</code>表示这是文档样式表，<code>href</code>包含样式表文件的路径。是空元素</li>
+<li><code>script</code>元素包含<code>src</code>属性，指向要加载的JavaScript文件路径。<ul>
+<li>最好加上<code>defer</code>以告诉浏览器在解析完成HTML后再加载JavaScript，避免JavaScript试图访问页面上不存在的HTML元素而产生错误</li>
+</ul>
+</li>
+</ul>
+<h4 id="为文档设定主语言"><a href="#为文档设定主语言" class="headerlink" title="为文档设定主语言"></a>为文档设定主语言</h4><p>可以通过在<code>&lt;html&gt;</code>标签中添加<code>lang</code>属性，为站点设定主语言</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br><span class="line">  …</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="HTML文本处理基础"><a href="#HTML文本处理基础" class="headerlink" title="HTML文本处理基础"></a>HTML文本处理基础</h3><p>HTML如何通过添加标题和段落、强调单词、创建列表等方式构造文本</p>
+<h4 id="标题和段落"><a href="#标题和段落" class="headerlink" title="标题和段落"></a>标题和段落</h4><p>段落：<code>&lt;p&gt;</code></p>
+<p>标题：<code>&lt;h1&gt;, &lt;h2&gt;...</code></p>
+<ul>
+<li><p>建议不超过三层标题</p>
+</li>
+<li><p>不仅是样式区别，更重要的提供了语义信息</p>
+</li>
+</ul>
+<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><ul>
+<li>无序列表：<ul>
+<li>从<code>&lt;ul&gt;</code>元素开始，包裹清单上所有被列出的项目</li>
+<li>使用<code>&lt;li&gt;</code>元素，包裹列出的每个项目</li>
+</ul>
+</li>
+<li>有序列表<ul>
+<li>使用<code>&lt;ol&gt;</code>元素</li>
+</ul>
+</li>
+<li>嵌套列表</li>
+</ul>
+<h4 id="重点强调"><a href="#重点强调" class="headerlink" title="重点强调"></a>重点强调</h4><p><strong>语义区分</strong></p>
+<ul>
+<li>倾斜：<code>&lt;em&gt;</code>(emphasis)</li>
+<li>加粗：<code>&lt;strong&gt;</code></li>
+</ul>
+<p><strong>单纯样式</strong></p>
+<blockquote>
+<p>这样仅仅影响表象而没有语义的元素，称为表象元素。语义对无障碍、SEO（搜索引擎优化）等非常重要</p>
+</blockquote>
+<ul>
+<li><code>&lt;i&gt;</code>：斜体</li>
+<li><code>&lt;b&gt;</code>：粗体</li>
+<li><code>&lt;u&gt;</code>：下划线</li>
+</ul>
+<h3 id="创建超链接"><a href="#创建超链接" class="headerlink" title="创建超链接"></a>创建超链接</h3><p>将文本或其他内容包裹在<code>&lt;a&gt;</code>元素内，并给它一个包含网址的<code>href</code>属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  我创建了一个指向</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://www.mozilla.org/zh-CN/"</span>&gt;</span>Mozilla 主页<span class="tag">&lt;/<span class="name">a</span>&gt;</span>的链接。</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>块级链接、图片链接</strong></p>
+<p>任何内容都可以作为链接出现，只需将其包裹在锚点元素内</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://developer.mozilla.org/zh-CN/"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>MDN Web 文档<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>自从 2005 年起，就开始记载包括 CSS、HTML、JavaScript 等网络技术。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>使用title属性添加支持信息</strong></p>
+<p>当鼠标悬停时，标题作为提示信息出现</p>
+<h4 id="统一资源定位符（URL）与路径（path）"><a href="#统一资源定位符（URL）与路径（path）" class="headerlink" title="统一资源定位符（URL）与路径（path）"></a>统一资源定位符（URL）与路径（path）</h4><p>统一资源定位符（Uniform Resource Locator）是一个定义了在网络上的位置的文本字符串。</p>
+<p>可使用路径查找文件</p>
+<p><strong>文档片段</strong></p>
+<p>超链接除了可以链接到文档外，也可以链接到HTML文档的特定部分。</p>
+<ul>
+<li><p>先给要链接到的元素分配一个id属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"Mailing_address"</span>&gt;</span>邮寄地址<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将id放在URL的末尾，并在前加#</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--其他文档--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  要提供意见和建议，请将信件邮寄至<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"contacts.html#Mailing_address"</span></span></span><br><span class="line"><span class="tag">    &gt;</span>我们的地址<span class="tag">&lt;/<span class="name">a</span></span></span><br><span class="line"><span class="tag">  &gt;</span>。</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--同一文档--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>本页面底部可以找到<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#Mailing_address"</span>&gt;</span>公司邮寄地址<span class="tag">&lt;/<span class="name">a</span>&gt;</span>。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>在下载链接时使用download属性</strong></p>
+<p>除了浏览器中打开外，链接还可以提供下载功能</p>
+<p>使用download属性调用下载功能，并提供一个默认的保存文件名</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span></span></span><br><span class="line"><span class="tag">  <span class="attr">href</span>=<span class="string">"https://download.mozilla.org/?product=firefox-latest-ssl&amp;os=win64&amp;lang=zh-CN"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">download</span>=<span class="string">"firefox-latest-64bit-installer.exe"</span>&gt;</span></span><br><span class="line">  下载最新的 Firefox 中文版 - Windows（64 位）</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="文档与网站构建"><a href="#文档与网站构建" class="headerlink" title="文档与网站构建"></a>文档与网站构建</h3><p>HTML可以使用块级元素定义网站中的复合区域</p>
+<h4 id="文档的基本组成部分"><a href="#文档的基本组成部分" class="headerlink" title="文档的基本组成部分"></a>文档的基本组成部分</h4><ul>
+<li><code>&lt;header&gt;</code>: 页眉</li>
+<li><code>&lt;nav&gt;</code>: 导航栏</li>
+<li><code>&lt;main&gt;</code>: 主内容<ul>
+<li>其中可以有各种内容区段，可用<code>&lt;article&gt;</code>、<code>&lt;section&gt;</code>和<code>&lt;div&gt;</code>等元素表示</li>
+</ul>
+</li>
+<li><code>&lt;aside&gt;</code>: 侧边栏<ul>
+<li>经常嵌套在<code>&lt;main&gt;</code>中</li>
+</ul>
+</li>
+<li><code>&lt;footer&gt;</code>: 页脚</li>
+</ul>
+<h4 id="HTML布局元素细节"><a href="#HTML布局元素细节" class="headerlink" title="HTML布局元素细节"></a>HTML布局元素细节</h4><p><strong>无语义元素</strong></p>
+<p><code>&lt;div&gt;</code>和<code>&lt;span&gt;</code>元素</p>
+<ul>
+<li><code>&lt;span&gt;</code>是一个内联的（inline）无语义元素</li>
+<li><code>&lt;div&gt;</code>是一个块级无语义元素</li>
+</ul>
+<p><strong>换行与水平分割线</strong></p>
+<p>均是空元素</p>
+<ul>
+<li><code>&lt;br&gt;</code>：换行元素</li>
+<li><code>&lt;hr&gt;</code>：主题性中断元素</li>
+</ul>
+<h2 id="多媒体与嵌入"><a href="#多媒体与嵌入" class="headerlink" title="多媒体与嵌入"></a>多媒体与嵌入</h2><h3 id="HTML中的图片"><a href="#HTML中的图片" class="headerlink" title="HTML中的图片"></a>HTML中的图片</h3><p><code>&lt;img&gt;</code>元素：</p>
+<ul>
+<li><code>src</code>属性：图片的URL</li>
+<li><code>alt</code>属性：备选文本</li>
+<li><code>width</code>和<code>height</code>属性：指定图片宽度和高度，以像素为单位<ul>
+<li>好处：预留空间，不会产生页面文字移动</li>
+</ul>
+</li>
+<li><code>title</code>属性：悬停提示</li>
+</ul>
+<h4 id="为图片搭配说明文字"><a href="#为图片搭配说明文字" class="headerlink" title="为图片搭配说明文字"></a>为图片搭配说明文字</h4><ul>
+<li><code>&lt;figure&gt;</code>元素：包裹图片和说明文字</li>
+<li><code>&lt;figcaption&gt;</code>元素：说明文字</li>
+</ul>
+<h4 id="网页上的其他图形"><a href="#网页上的其他图形" class="headerlink" title="网页上的其他图形"></a>网页上的其他图形</h4><ul>
+<li>Canvas<ul>
+<li><code>&lt;canvas&gt;</code>元素提供了使用JavaScript绘制2D图像的API</li>
+</ul>
+</li>
+<li>SVG<ul>
+<li>借助可缩放矢量图形来渲染2D图形</li>
+</ul>
+</li>
+<li>使用HTML音频和视频<ul>
+<li>与<code>&lt;img&gt;</code>类似，可以使用<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>嵌入网页，并控制播放</li>
+</ul>
+</li>
+</ul>
+<h3 id="视频和音频内容"><a href="#视频和音频内容" class="headerlink" title="视频和音频内容"></a>视频和音频内容</h3><p><strong><code>vedio</code>元素</strong></p>
+<p>嵌入视频，例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"rabbit320.webm"</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    你的浏览器不支持 HTML 视频。可点击<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"rabbit320.mp4"</span>&gt;</span>此链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span>观看。</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>src</code>：视频资源的来源</li>
+<li><code>controls</code>：让视频或音频包含浏览器自带的控制界面</li>
+<li><code>video</code>元素内的段落：后背内容</li>
+<li>其他特性：<ul>
+<li><code>width</code>和<code>height</code></li>
+<li><code>autoplay</code>：立即播放</li>
+<li><code>loop</code>：自动重播</li>
+<li><code>poster</code>：指向图像URL，会在视频播放前显示</li>
+<li><code>preload</code>：缓冲</li>
+</ul>
+</li>
+</ul>
+<p><strong><code>&lt;audio&gt;</code>元素</strong></p>
+<p>与<code>video</code>元素几乎完全相同，只有细微差别</p>
+<ul>
+<li>不支持<code>height</code>和<code>width</code>属性</li>
+<li>不支持<code>poster</code>属性</li>
+</ul>
+<h2 id="HTML表格"><a href="#HTML表格" class="headerlink" title="HTML表格"></a>HTML表格</h2><p>使用表格是很糟糕的，原因是：</p>
+<ul>
+<li>减少了视觉受损用户的无障碍</li>
+<li>产生很多标签</li>
+<li>不能自动响应</li>
+</ul>
+<p><strong>创建表格</strong></p>
+<ul>
+<li><code>&lt;table&gt;</code>：最外层，包裹内容</li>
+<li><code>&lt;tr&gt;</code>：表格一行</li>
+<li><code>&lt;td&gt;</code>：单元格</li>
+<li><code>&lt;th&gt;</code>：表格标题</li>
+</ul>
+<p><strong>允许单元格跨越多行和列</strong></p>
+<p>使用<code>colspan</code>和<code>rowspan</code>属性，控制宽度或高度是几个单元格</p>
+<p><strong>为表格中的列提供共同样式</strong></p>
+<p><code>col</code>和<code>colgroup</code>元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">colgroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">"background-color: yellow"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Data 1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Data 2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Calcutta<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Orange<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Robots<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Jazz<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>表格标题</strong></p>
+<p>在<code>&lt;table&gt;</code>内使用<code>&lt;caption&gt;</code>元素</p>
+
+
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+           
+          <li class="next">
+            <a
+              href="/2024/06/15/前端学习路线/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="前端学习路线"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
+        </ul>
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
+        
+        <!-- tip end -->
+
+        <!-- Music start-->
+        
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#HTML介绍"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HTML介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#元素"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">元素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#属性"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#剖析HTML文档"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">剖析HTML文档</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#文档结构"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">文档结构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#HTML中的空白"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">HTML中的空白</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#HTML中的特殊字符"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">HTML中的特殊字符</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML头部"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">HTML头部</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#添加标题"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">添加标题</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#元数据：-lt-meta-gt-元素"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">元数据：&lt;meta&gt;元素</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#在HTML中应用CSS和JavaScript"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">在HTML中应用CSS和JavaScript</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#为文档设定主语言"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">为文档设定主语言</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML文本处理基础"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">HTML文本处理基础</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#标题和段落"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">标题和段落</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#列表"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">列表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#重点强调"><span class="toc-nav-number">1.5.3.</span> <span class="toc-nav-text">重点强调</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建超链接"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">创建超链接</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#统一资源定位符（URL）与路径（path）"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">统一资源定位符（URL）与路径（path）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文档与网站构建"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">文档与网站构建</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#文档的基本组成部分"><span class="toc-nav-number">1.7.1.</span> <span class="toc-nav-text">文档的基本组成部分</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#HTML布局元素细节"><span class="toc-nav-number">1.7.2.</span> <span class="toc-nav-text">HTML布局元素细节</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#多媒体与嵌入"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">多媒体与嵌入</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML中的图片"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">HTML中的图片</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#为图片搭配说明文字"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">为图片搭配说明文字</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#网页上的其他图形"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">网页上的其他图形</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#视频和音频内容"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">视频和音频内容</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#HTML表格"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">HTML表格</span></a></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#前端"
+              title="前端"
+              >前端</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
+
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/xoioiiox">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; xoioiiox 2024 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/xoioiiox" target="_blank" rel="noopener">
+                        <i>xoioiiox</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://xoioiiox.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;❤️&quot;,&quot;🥥&quot;,&quot;🍅&quot;,&quot;🧀&quot;,&quot;🍨&quot;,&quot;🍇&quot;,&quot;🍩&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
