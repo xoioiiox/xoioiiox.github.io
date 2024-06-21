@@ -271,13 +271,14 @@
                     前端学习笔记（三） JavaScript
                 </h3>
                 <div class="post-content-preview">
-                    JavaScript学习笔记JavaScript第一步什么是JavaScript定义JavaScript是一种脚本编程语言，可以在网页上实现复杂的功能
+                    本文参考MDN 文档 JavaScript部分
+JavaScript第一步什么是JavaScript定义JavaScript是一种脚本编程语言，可以在网页上实现复杂的功能
 
 HTML是一种标记语言，用来结构化我们的网页内容并赋予内容含义
 CSS是一种样式规则语言，可将样式应用于HTML内容
 JavaScript是一种脚本语言，用来创建动态更新的内容，控制多媒体，制作图像动画等等
 
-它可以做什么？JavaScri......
+它可以做什......
                 </div>
             </a>
             
@@ -859,7 +860,7 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;❤️&#34;,&#34;🥥&#34;,&#34;🍅&#34;,&#34;🧀&#34;,&#34;🍨&#34;,&#34;🍇&#34;,&#34;🍩&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;❤️&quot;,&quot;🥥&quot;,&quot;🍅&quot;,&quot;🧀&quot;,&quot;🍨&quot;,&quot;🍇&quot;,&quot;🍩&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
         
 
         <!-- background effects end -->
@@ -869,6 +870,21 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
