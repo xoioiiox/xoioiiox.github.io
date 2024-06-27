@@ -26,12 +26,12 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
   <title>
-     About - XoioiioX&#39;s Blog 
+     JS事件循环 - XoioiioX&#39;s Blog 
   </title>
 
   <link
     rel="canonical"
-    href="https://xoioiiox.github.io/about/"
+    href="https://xoioiiox.github.io/2024/06/27/JS事件循环/"
   />
 
   <!-- Bootstrap Core CSS -->
@@ -94,8 +94,8 @@
     header.intro-header{
         
             
-                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/header_img/me.jpg')
-                /*page*/
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('bg.jpg')
+                /*post*/
             
         
     }
@@ -113,10 +113,33 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>About</h1>
-                        <!--<hr class="small">-->
-                        <span id="subdusi" class="subheading">When you get up early and work hard, when you stay up late, when you feel too tired to stand up again, but still support the night when you get up, that is the power of dreams.</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+                            
+                        </div>
+                        <h1>JS事件循环</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xoioiiox on
+                            2024-06-27
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">723</span> and
+                                Reading Time <span class="post-count">2</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
                     </div>
                 
 
@@ -226,150 +249,228 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
     <div class="row">
-        
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <h1 id="JS事件循环"><a href="#JS事件循环" class="headerlink" title="JS事件循环"></a>JS事件循环</h1><p>本文主要参考自：</p>
+<p><a href="https://www.ruanyifeng.com/blog/2014/10/event-loop.html" target="_blank" rel="noopener">JavaScript 运行机制详解：再谈Event Loop</a> </p>
+<p><a href="https://juejin.cn/post/6844903471280291854" target="_blank" rel="noopener">理解 JavaScript 中的 macrotask 和 microtask</a></p>
+<h2 id="JavaScript单线程"><a href="#JavaScript单线程" class="headerlink" title="JavaScript单线程"></a>JavaScript单线程</h2><p>JavaScript语言的一大特点就是单线程，也就是同一时间只能做一件事。这与其用途有关，JS的主要任务是和用户互动以及操作DOM。这决定了它只能是单线程，否则会引起复杂的同步问题。</p>
+<h2 id="任务队列"><a href="#任务队列" class="headerlink" title="任务队列"></a>任务队列</h2><p>单线程意味着所有任务需要排队，前一个任务完成，后一个才能开始。由于部分任务例如IO设备很慢，JS设计者意识到主线可以不管IO设备，挂起等待中的任务，先运行排在后面的。等IO返回了结果，再回头把挂起的任务继续，这就是同步任务（synchronous）和异步任务（asynchronous）。</p>
+<p>具体来说，异步任务的运行机制如下：</p>
+<ol>
+<li>所有同步任务都在主进程上执行，形成一个<strong>执行栈</strong></li>
+<li>主线程之外还存在一个“<strong>任务队列</strong>”。只要<u>异步任务有了运行结果</u>，就在“任务队列”中放置一个事件</li>
+<li>一旦<strong>执行栈</strong>中所有同步任务<u>执行完毕</u>，系统就会读取“<strong>任务队列</strong>”。对应的异步任务结束等待状态，进入执行栈，开始执行</li>
+<li>主线程不断重复以上三步</li>
+</ol>
+<p><img src="bg2014100801.jpg" alt="bg2014100801" style="zoom:80%;" /></p>
+<h2 id="事件和回调函数"><a href="#事件和回调函数" class="headerlink" title="事件和回调函数"></a>事件和回调函数</h2><p>任务队列是一个先进先出的数据结构。异步任务必须指定回调函数，当主进程开始执行异步任务，就是执行对应的回调函数。</p>
+<p>:warning:</p>
+<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><p><img src="bg2014100802.png" alt="bg2014100802" style="zoom:80%;" /></p>
+<ul>
+<li>主线程运行的时候，产生堆（heap）和栈（stack）</li>
+<li>栈中的代码调用各种外部API，它们在”任务队列”中加入各种事件（click，load，done）</li>
+<li>只要栈中的代码执行完毕，主线程就会去读取”任务队列”</li>
+<li>依次执行那些事件所对应的回调函数</li>
+</ul>
+<p>注意：执行栈中的代码（同步任务）总是在读取任务列表（异步任务）之前执行！</p>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><p>除了放置异步任务的事件，“任务队列”还可以防止定时事件，即制定某些代码在多少时间之后执行。</p>
+<p><code>setTimeout()</code>接受两个参数，第一个是回调函数，第二个是推迟执行的秒数。<code>setTimeout(fn, o)</code>的含义是，指定某个任务在主线程最早可得的空闲时间执行。<strong>他在“任务队列”的尾部添加一个事件，因此要等到同步任务和“任务队列”现有的事件都处理完，才会得到执行</strong></p>
+<h2 id="Macrotasks-和-Microtasks"><a href="#Macrotasks-和-Microtasks" class="headerlink" title="Macrotasks 和 Microtasks"></a>Macrotasks 和 Microtasks</h2><p>Macrotasks 和 Microtasks都属于异步任务：</p>
+<ul>
+<li>macrotasks: <code>setTimeout</code>, <code>setInterval</code>, I/O…</li>
+<li>microtasks: <code>Promises</code>, <code>process.nextTick</code>…</li>
+</ul>
+<p>“任务队列”分为macrotasks 和 microtasks，每一次事件循环中，macrotasks只会提取一个执行，而microtasks会一直提取，直到清空。</p>
 
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-                <blockquote>
-<p>💜 Hi! This is xoioiiox<br>💻️ Here you can see some record of an ordinary BUAA CS student<br>🏛︎ Enjoy the process of building fantastic from blank space<br>🤗 You might get an idea of what I look like from the background picture ~</p>
-</blockquote>
-<p><strong>联系方式</strong><br>wechat: xoioiiox<br>email: 21373236@buaa.edu.cn</p>
 
-            </div>
-
-            <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        
-<!--
-<h5>SEARCH</h5>
-<div class="search-article" class="tags">
-	<input id="search-kw" type="text" name="search_article" placeholder="Enter keywords for search" />
-	<div class="search-img">
-		<img 
-			src="/img/search.png" 
-			alt="search" 
-			onMouseOver="this.src='/img/search-focus.png'" 
-			onMouseOut="this.src='/img/search.png'"/>
-	</div>
-</div>-->
-
-<h5>SEARCH</h5>
-<div id="site_search">
-	<div class="form-group">
-		<input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
-	</div>  
-	<div id="local-search-result"></div>
-</div>
-
-        <hr>
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-        
-            
-        
-            
-            <a href="/tags/#前端" title="前端" rel="7">前端</a>
-            
-        
-    </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
-
-        
-            <img id = "avatar_pic" src="/img/avatar.png" />
-        
-
-        
-            <p>Welcome to visit, I&#39;m XoioiioX!</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/xoioiiox">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+           
+          <li class="next">
+            <a
+              href="/2024/06/22/JavaScript设计模式/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="JavaScript设计模式"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
         </ul>
-    </div>
-</section>
-        <hr>
-    
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
         
-  <h5>VISITORS</h5>
-  <div class="widget">
-    <span>
-    	Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-	</span>
-	<br/>
-	<span>
-		<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-	</span>
+        <!-- tip end -->
+
+        <!-- Music start-->
+        
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#JS事件循环"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">JS事件循环</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JavaScript单线程"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">JavaScript单线程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#任务队列"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">任务队列</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#事件和回调函数"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">事件和回调函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#事件循环"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">事件循环</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#定时器"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">定时器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Macrotasks-和-Microtasks"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">Macrotasks 和 Microtasks</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#前端"
+              title="前端"
+              >前端</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
+</article>
 
-        <hr>
-    
-        
-    <h5>ARCHIVES</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li></ul>
-    </div>
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
 
-        <hr>
-    
-</div>
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
 
-        
-    </div>
-</div>
 
 
     <!-- Footer -->
