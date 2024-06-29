@@ -129,8 +129,8 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">723</span> and
-                                Reading Time <span class="post-count">2</span> Minutes
+                                Words <span class="post-count">930</span> and
+                                Reading Time <span class="post-count">3</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -286,9 +286,21 @@
 <h2 id="Macrotasks-和-Microtasks"><a href="#Macrotasks-和-Microtasks" class="headerlink" title="Macrotasks 和 Microtasks"></a>Macrotasks 和 Microtasks</h2><p>Macrotasks 和 Microtasks都属于异步任务：</p>
 <ul>
 <li>macrotasks: <code>setTimeout</code>, <code>setInterval</code>, I/O…</li>
-<li>microtasks: <code>Promises</code>, <code>process.nextTick</code>…</li>
+<li>microtasks: <code>Promises</code>, <code>process.nextTick</code>…<ul>
+<li><code>process.nextTick</code>优先级最高，会在同步任务结束后立即执行</li>
+</ul>
+</li>
 </ul>
 <p>“任务队列”分为macrotasks 和 microtasks，每一次事件循环中，macrotasks只会提取一个执行，而microtasks会一直提取，直到清空。</p>
+<p>具体来说，在Job queue中的队列分为两种类型：</p>
+<ul>
+<li>宏任务 Macrotask宏任务是指Event Loop在每个阶段执行的任务</li>
+<li>微任务 Microtask微任务是指Event Loop在每个阶段之间执行的任务</li>
+</ul>
+<p>我们举例来看执行顺序的规定，我们假设：</p>
+<p>宏任务队列包含任务: A1, A2 , A3</p>
+<p>微任务队列包含任务: B1, B2 , B3</p>
+<p>执行顺序为，首先执行宏任务队列开头的任务，也就是 A1 任务，执行完毕后，在执行微任务队列里的所有任务，也就是依次执行B1, B2 , B3，执行完后清空微任务队中的任务，接着执行宏任务中的第二个任务A2，依次循环。</p>
 
 
         <hr />
