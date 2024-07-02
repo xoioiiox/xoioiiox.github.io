@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>文件引入方式</title>
+      <link href="/2024/07/02/%E6%96%87%E4%BB%B6%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F/"/>
+      <url>/2024/07/02/%E6%96%87%E4%BB%B6%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="link-和-import"><a href="#link-和-import" class="headerlink" title="link 和 @import"></a>link 和 @import</h2><p>二者均是样式文件的导入方式</p><h3 id="link"><a href="#link" class="headerlink" title="link"></a>link</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"index.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css"><span class="keyword">@import</span> url(index.css)</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><ul><li>引入内容<ul><li>link除了引入样式文件，还可以引用图片等资源文件</li><li>@import只能引用样式文件</li></ul></li><li>加载顺序<ul><li>link引用CSS时，在页面载入时同时加载</li><li>@import需要页面完全载入之后再加载</li></ul></li><li>兼容性<ul><li>link是HTML标签，无兼容问题</li><li>@import是CSS2.1提出的，低版本浏览器不支持</li></ul></li><li>对JS的支持<ul><li>link支持使用JavaScript控制DOM改变样式，例如鼠标悬浮时改变颜色</li><li>@import不支持</li></ul></li></ul><h2 id="href和src获取资源"><a href="#href和src获取资源" class="headerlink" title="href和src获取资源"></a>href和src获取资源</h2><h3 id="src"><a href="#src" class="headerlink" title="src"></a>src</h3><p>script和img用src获取资源。</p><ul><li>src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置</li><li>在请求src资源时，会将其指向的资源下载并应用到文档内</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>当浏览器解析到该元素时，会<strong>暂停其他资源的下载和处理</strong>，直到该资源加载、编译、执行完毕。因此，应该将js脚本放在<strong>底部</strong>。</p><h3 id="href"><a href="#href" class="headerlink" title="href"></a>href</h3><p>link用href获取资源。</p><ul><li>href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接</li><li>在文档中添加link标签，浏览器会识别该文档为css文件，并行下载资源并且不会停止对当前文档的处理。因此建议使用link方式加载css，而不是@import</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS中的this</title>
       <link href="/2024/07/02/JS%E4%B8%AD%E7%9A%84this/"/>
       <url>/2024/07/02/JS%E4%B8%AD%E7%9A%84this/</url>

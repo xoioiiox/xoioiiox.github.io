@@ -26,12 +26,12 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
   <title>
-     About - XoioiioX&#39;s Blog 
+     文件引入方式 - XoioiioX&#39;s Blog 
   </title>
 
   <link
     rel="canonical"
-    href="https://xoioiiox.github.io/about/"
+    href="https://xoioiiox.github.io/2024/07/02/文件引入方式/"
   />
 
   <!-- Bootstrap Core CSS -->
@@ -94,8 +94,8 @@
     header.intro-header{
         
             
-                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/header_img/me.jpg')
-                /*page*/
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('bg1.jpg')
+                /*post*/
             
         
     }
@@ -113,10 +113,35 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>About</h1>
-                        <!--<hr class="small">-->
-                        <span id="subdusi" class="subheading">When you get up early and work hard, when you stay up late, when you feel too tired to stand up again, but still support the night when you get up, that is the power of dreams.</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+                            
+                              <a class="tag" href="/tags/#HTML" title="HTML">HTML</a>
+                            
+                        </div>
+                        <h1>文件引入方式</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xoioiiox on
+                            2024-07-02
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">395</span> and
+                                Reading Time <span class="post-count">1</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
                     </div>
                 
 
@@ -226,160 +251,241 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
     <div class="row">
-        
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <h2 id="link-和-import"><a href="#link-和-import" class="headerlink" title="link 和 @import"></a>link 和 @import</h2><p>二者均是样式文件的导入方式</p>
+<h3 id="link"><a href="#link" class="headerlink" title="link"></a>link</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"index.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css"><span class="keyword">@import</span> url(index.css)</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><ul>
+<li>引入内容<ul>
+<li>link除了引入样式文件，还可以引用图片等资源文件</li>
+<li>@import只能引用样式文件</li>
+</ul>
+</li>
+<li>加载顺序<ul>
+<li>link引用CSS时，在页面载入时同时加载</li>
+<li>@import需要页面完全载入之后再加载</li>
+</ul>
+</li>
+<li>兼容性<ul>
+<li>link是HTML标签，无兼容问题</li>
+<li>@import是CSS2.1提出的，低版本浏览器不支持</li>
+</ul>
+</li>
+<li>对JS的支持<ul>
+<li>link支持使用JavaScript控制DOM改变样式，例如鼠标悬浮时改变颜色</li>
+<li>@import不支持</li>
+</ul>
+</li>
+</ul>
+<h2 id="href和src获取资源"><a href="#href和src获取资源" class="headerlink" title="href和src获取资源"></a>href和src获取资源</h2><h3 id="src"><a href="#src" class="headerlink" title="src"></a>src</h3><p>script和img用src获取资源。</p>
+<ul>
+<li>src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置</li>
+<li>在请求src资源时，会将其指向的资源下载并应用到文档内</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当浏览器解析到该元素时，会<strong>暂停其他资源的下载和处理</strong>，直到该资源加载、编译、执行完毕。因此，应该将js脚本放在<strong>底部</strong>。</p>
+<h3 id="href"><a href="#href" class="headerlink" title="href"></a>href</h3><p>link用href获取资源。</p>
+<ul>
+<li>href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接</li>
+<li>在文档中添加link标签，浏览器会识别该文档为css文件，并行下载资源并且不会停止对当前文档的处理。因此建议使用link方式加载css，而不是@import</li>
+</ul>
 
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-                <blockquote>
-<p>💜 Hi! This is xoioiiox<br>💻️ Here you can see some record of an ordinary BUAA CS student<br>🏛︎ Enjoy the process of building fantastic from blank space<br>🤗 You might get an idea of what I look like from the background picture ~</p>
-</blockquote>
-<p><strong>联系方式</strong><br>wechat: xoioiiox<br>email: 21373236@buaa.edu.cn</p>
 
-            </div>
-
-            <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        
-<!--
-<h5>SEARCH</h5>
-<div class="search-article" class="tags">
-	<input id="search-kw" type="text" name="search_article" placeholder="Enter keywords for search" />
-	<div class="search-img">
-		<img 
-			src="/img/search.png" 
-			alt="search" 
-			onMouseOver="this.src='/img/search-focus.png'" 
-			onMouseOut="this.src='/img/search.png'"/>
-	</div>
-</div>-->
-
-<h5>SEARCH</h5>
-<div id="site_search">
-	<div class="form-group">
-		<input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
-	</div>  
-	<div id="local-search-result"></div>
-</div>
-
-        <hr>
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-        
-            
-        
-            
-            <a href="/tags/#前端" title="前端" rel="9">前端</a>
-            
-        
-            
-            <a href="/tags/#JS" title="JS" rel="4">JS</a>
-            
-        
-            
-        
-            
-            <a href="/tags/#HTML" title="HTML" rel="2">HTML</a>
-            
-        
-    </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
-
-        
-            <img id = "avatar_pic" src="/img/avatar.png" />
-        
-
-        
-            <p>Welcome to visit, I&#39;m XoioiioX!</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/xoioiiox">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+           
+          <li class="next">
+            <a
+              href="/2024/07/02/JS中的this/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="JS中的this"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
         </ul>
-    </div>
-</section>
-        <hr>
-    
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
         
-  <h5>VISITORS</h5>
-  <div class="widget">
-    <span>
-    	Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-	</span>
-	<br/>
-	<span>
-		<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-	</span>
+        <!-- tip end -->
+
+        <!-- Music start-->
+        
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#link-和-import"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">link 和 @import</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">link</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#import"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">@import</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#区别"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#href和src获取资源"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">href和src获取资源</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#src"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">src</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#href"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">href</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#前端"
+              title="前端"
+              >前端</a
+            >
+            
+            <a
+              class="tag"
+              href="/tags/#HTML"
+              title="HTML"
+              >HTML</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
+</article>
 
-        <hr>
-    
-        
-    <h5>ARCHIVES</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li></ul>
-    </div>
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
 
-        <hr>
-    
-</div>
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
 
-        
-    </div>
-</div>
 
 
     <!-- Footer -->
