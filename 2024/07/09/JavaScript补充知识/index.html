@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="google-site-verification"
+    content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"
+  />
+  <meta name="baidu-site-verification" content="093lY4ziMu" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <meta name="description" content="A hexo theme" />
+  <meta name="keyword" content="dusign, hexo-theme-snail" />
+  <link rel="shortcut icon" href="/img/guide.png" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <link rel="stylesheet" href="/css/walineRoot.css" />
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+  <title>
+     JavaScript补充（一） - XoioiioX&#39;s Blog 
+  </title>
+
+  <link
+    rel="canonical"
+    href="https://xoioiiox.github.io/2024/07/09/JavaScript补充知识/"
+  />
+
+  <!-- Bootstrap Core CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+  <!-- Custom CSS -->
+   
+<link rel="stylesheet" href="/css/dusign-light.css">
+ 
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+ 
+<link rel="stylesheet" href="/css/font-awesome.css">
+ 
+<link rel="stylesheet" href="/css/toc.css">
+
+  <!-- background effects end -->
+  
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="/css/highlight.css">
+ 
+<link rel="stylesheet" href="/css/widget.css">
+ 
+<link rel="stylesheet" href="/css/rocket.css">
+
+  
+<link rel="stylesheet" href="/css/signature.css">
+ 
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+  <link
+    rel="stylesheet"
+    href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  />
+
+  <!-- photography -->
+  
+<link rel="stylesheet" href="/css/photography.css">
+
+
+  <!-- ga & ba script hoook -->
+  <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('bg1.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+                            
+                              <a class="tag" href="/tags/#JS" title="JS">JS</a>
+                            
+                        </div>
+                        <h1>JavaScript补充（一）</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xoioiiox on
+                            2024-07-09
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">4.7k</span> and
+                                Reading Time <span class="post-count">19</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">XoioiioX&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p>死锁的四个必要条件：</p>
+<ul>
+<li>互斥条件</li>
+<li>不可剥夺条件</li>
+<li>请求和保持条件</li>
+<li>循环等待条件</li>
+</ul>
+<h2 id="常见的遍历方法"><a href="#常见的遍历方法" class="headerlink" title="常见的遍历方法"></a>常见的遍历方法</h2><h3 id="for-in"><a href="#for-in" class="headerlink" title="for-in"></a>for-in</h3><ul>
+<li><code>for-in</code> 用于遍历对象的<strong>可枚举</strong>属性。它会遍历对象自身的属性以及从原型链上继承的属性。</li>
+<li>也可以用于遍历数组，但通常不推荐，因为它主要是<strong>针对对象设计</strong>的，使用 <code>for-in</code> 遍历数组可能会产生意想不到的结果。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">'John'</span>, <span class="attr">age</span>: <span class="number">30</span>, <span class="attr">city</span>: <span class="string">'New York'</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> person) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(key + <span class="string">": "</span> + person[key]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出:</span></span><br><span class="line"><span class="comment">// name: John</span></span><br><span class="line"><span class="comment">// age: 30</span></span><br><span class="line"><span class="comment">// city: New York</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li><code>for-in</code> 遍历的顺序不一定是对象属性添加的顺序。</li>
+<li>它会遍历对象自身的属性和从原型链继承的属性。</li>
+<li>不适合用于数组遍历，因为数组是有序的，<code>for-in</code> 不保证按顺序访问数组元素。</li>
+</ul>
+<h3 id="for-of"><a href="#for-of" class="headerlink" title="for-of"></a>for-of</h3><ul>
+<li><code>for-of</code> 用于遍历<strong>可迭代</strong>对象（如数组、字符串、Set、Map等）。</li>
+<li>它只能用于有 <code>Symbol.iterator</code> 属性的对象。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> value <span class="keyword">of</span> array) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出:</span></span><br><span class="line"><span class="comment">// a</span></span><br><span class="line"><span class="comment">// b</span></span><br><span class="line"><span class="comment">// c</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li><code>for-of</code> <strong>不能用于遍历普通对象</strong>，除非对象实现了 <code>Symbol.iterator</code>。</li>
+<li><code>for-of</code> 提供了一个简单、直接的方式来遍历数组和其他可迭代对象。</li>
+</ul>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><ul>
+<li><code>forEach()</code> 方法用于遍历数组中的每个元素并对其执行指定的函数。</li>
+<li>该方法仅适用于数组（以及类数组对象）。</li>
+</ul>
+<p><strong>语法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">currentValue, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// code block to be executed</span></span><br><span class="line">&#125;, thisValue);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>currentValue</code>：当前遍历到的元素。</li>
+<li><code>index</code>（可选）：当前元素的索引。</li>
+<li><code>arr</code>（可选）：正在遍历的数组。</li>
+<li><code>thisValue</code>（可选）：传递给函数的 <code>this</code> 值。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">array.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value, index</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index + <span class="string">': '</span> + value);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出:</span></span><br><span class="line"><span class="comment">// 0: 1</span></span><br><span class="line"><span class="comment">// 1: 2</span></span><br><span class="line"><span class="comment">// 2: 3</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li><code>forEach()</code> 不能在循环中终止或跳出（除了通过抛出异常）。</li>
+<li><code>forEach()</code> 不会返回新的数组，它只是执行一个函数并且没有返回值。</li>
+<li>如果需要返回一个新数组或进行过滤、映射等操作，可以使用 <code>map()</code>、<code>filter()</code> 等其他数组方法。</li>
+</ul>
+<h3 id="比较与选择"><a href="#比较与选择" class="headerlink" title="比较与选择"></a>比较与选择</h3><ul>
+<li><strong><code>for-in</code></strong>：适用于<strong>遍历对象的属性</strong>，但可能会遍历到原型链上的属性；不适合遍历数组。</li>
+<li><strong><code>for-of</code></strong>：适用于<strong>遍历可迭代对象</strong>，简洁且直接，不适合遍历普通对象。</li>
+<li><strong><code>forEach()</code></strong>：适用于<strong>数组的遍历</strong>，可以传递 <code>this</code> 值，但不能中断遍历。</li>
+</ul>
+<h2 id="set-和-map"><a href="#set-和-map" class="headerlink" title="set 和 map"></a>set 和 map</h2><h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set是一种类似于数组的数据结构，其存储的成员都是<strong>不重复</strong>的。set通过new关键字实例化，参数可以是数组或类数组的对象</p>
+<blockquote>
+<p>set中只会保留一个NaN，这说明set中NaN等于NaN</p>
+</blockquote>
+<ul>
+<li><p>操作方法：add(), delete(), has(), clear()</p>
+</li>
+<li><p>遍历方法：keys(), values(), entries(), forEach()</p>
+</li>
+<li>数组方法：map(), filter()</li>
+</ul>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>JavaScript中对象object是键值对K-V的集合，但K的取值只能说string或symbol。Map也是K-V的集合，但K可以取任意类型。Map通过new关键字实例化</p>
+<ul>
+<li>方法：set(), get(), has(), delete()</li>
+<li>遍历方法：同set</li>
+</ul>
+<h2 id="文件异步上传"><a href="#文件异步上传" class="headerlink" title="文件异步上传"></a>文件异步上传</h2><p>//todo</p>
+<h2 id="防抖和节流"><a href="#防抖和节流" class="headerlink" title="防抖和节流"></a>防抖和节流</h2><p>防抖和节流是优化高效率执行js代码的一种手段。js中的一些事件例如浏览器的resize、scroll，鼠标的mousermove、mouseover等，会不断的调用绑定在事件上的回调函数，极大地浪费资源。为了优化体验，需要对这类事件进行调用次数的限制。</p>
+<h3 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h3><p>在事件被触发n秒之后再执行回调，若在这n秒内又被触发，则重新计时。</p>
+<blockquote>
+<p>arguments是指什么？如何传入的？？</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> timer;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">		<span class="keyword">var</span> args = <span class="built_in">arguments</span>;</span><br><span class="line">		<span class="keyword">if</span> (timer) &#123;</span><br><span class="line">			clearTimeout(timer);</span><br><span class="line">		&#125;</span><br><span class="line">		timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			fn.apply(_this, args);</span><br><span class="line">		&#125;, delay);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以写作：</p>
+<blockquote>
+<p>其中…args表示一个剩余参数，可以传入一个包含多个参数的数组</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 1.定义一个定时器, 保存上一次的定时器</span></span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">null</span> </span><br><span class="line">  <span class="comment">// 2.真正执行的函数</span></span><br><span class="line">  <span class="keyword">const</span> _debounce = <span class="function"><span class="keyword">function</span> (<span class="params">...args</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 取消上一次的定时器</span></span><br><span class="line">    <span class="keyword">if</span> (timer) clearTimeout(timer)</span><br><span class="line">    <span class="comment">// 延迟执行</span></span><br><span class="line">    timer = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 外部传入的真正要执行的函数,绑定this和参数</span></span><br><span class="line">      fn.apply(<span class="keyword">this</span>, args)</span><br><span class="line">    &#125;, delay)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _debounce</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用闭包后，解决传参和封装防抖函数的问题，这样就可以在其他地方将需要防抖的函数传入<code>debounce</code>了。</p>
+<p><strong>应用</strong></p>
+<ul>
+<li>搜索框输入，只在用户最后一次输入完，再发送请求</li>
+<li>手机号、邮箱格式检测</li>
+</ul>
+<h3 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h3><p>每隔一段时间，只执行一次函数</p>
+<p><strong>定时器实现</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> timer;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">var</span> args = <span class="built_in">arguments</span>;</span><br><span class="line">        <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            fn.apply(_this, args);</span><br><span class="line">            timer = <span class="literal">null</span>; <span class="comment">// 在delay后执行完fn()之后清空timer，此时timer为假，throttle触发可以进入计时器</span></span><br><span class="line">        &#125;, delay)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>时间戳实现</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> previous = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 使用闭包返回一个函数，并且用到闭包函数外的变量previous</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">var</span> args = <span class="built_in">arguments</span>;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        <span class="keyword">if</span> (now - previous &gt; delay) &#123;</span><br><span class="line">            fn.apply(_this, args);</span><br><span class="line">            previous = now;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>应用</strong></p>
+<ul>
+<li>滚动加载，加载更多和滚到底部监听</li>
+<li>搜索框，搜索联想功能</li>
+<li>高频点击提交</li>
+</ul>
+<h2 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h2><ul>
+<li>浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象共享同一块内存</li>
+<li>深拷贝会创造一个一样的对象，和原对象不共享内存，修改新对象不会改原对象</li>
+</ul>
+<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p><strong><code>Object.assign</code>方法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> obj1 = <span class="built_in">Object</span>.assign(&#123;&#125;, obj);</span><br><span class="line">obj1.a = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p><strong><code>for-in</code>方法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只复制第一层的浅拷贝</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">simpleCopy</span>(<span class="params">obj1</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> obj2 = <span class="built_in">Array</span>.isArray(obj1) ? [] : &#123;&#125;;</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> obj1) &#123;</span><br><span class="line">   obj2[i] = obj1[i];</span><br><span class="line">  &#125;</span><br><span class="line">   <span class="keyword">return</span> obj2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: &#123;<span class="attr">d</span>: <span class="number">3</span>&#125;&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = simpleCopy(obj1);</span><br><span class="line">obj2.a = <span class="number">3</span>;</span><br><span class="line">obj2.c.d = <span class="number">4</span>;</span><br><span class="line">alert(obj1.a); <span class="comment">// 1</span></span><br><span class="line">alert(obj2.a); <span class="comment">// 3</span></span><br><span class="line">alert(obj1.c.d); <span class="comment">// 4</span></span><br><span class="line">alert(obj2.c.d); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+<p>这里对于a，b进行了深拷贝；c的值是对象，未进行深拷贝</p>
+<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p><strong>递归拷贝所有层级属性</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> objClone = <span class="built_in">Array</span>.isArray(obj)? []: &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span>(obj &amp;&amp; <span class="keyword">typeof</span> obj === <span class="string">"object"</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">            <span class="keyword">if</span>(obj.hasOwnProperty(key)) &#123;</span><br><span class="line">                <span class="comment">//判断ojb子元素是否为对象，如果是，递归复制</span></span><br><span class="line">                <span class="keyword">if</span>(obj[key] &amp;&amp; <span class="keyword">typeof</span> obj[key]===<span class="string">"object"</span>) &#123;</span><br><span class="line">                    objClone[key] = deepClone(obj[key]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">//如果不是，简单复制</span></span><br><span class="line">                    objClone[key] = obj[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> objClone;</span><br><span class="line">&#125;    </span><br><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], b = deepClone(a);</span><br><span class="line">a[<span class="number">0</span>] = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);</span><br></pre></td></tr></table></figure>
+<p><strong><code>JSON.stringify</code> 和 <code>JSON.parse</code></strong></p>
+<p>使用<code>JSON.stringify</code>把对象转成字符串，再用<code>JSON.parse</code>把字符串转换成<strong>新的对象</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span>(<span class="params">obj1</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> _obj = <span class="built_in">JSON</span>.stringify(obj1);</span><br><span class="line">	<span class="keyword">let</span> obj2 = <span class="built_in">JSON</span>.parse(_obj);</span><br><span class="line">	<span class="keyword">return</span> obj2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, [<span class="number">1</span>, <span class="number">2</span>], <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> b = deepCopy(a);</span><br><span class="line">b[<span class="number">1</span>][<span class="number">0</span>] = <span class="number">2</span>;</span><br><span class="line">alert(a); <span class="comment">// 1,1,2,3,4</span></span><br><span class="line">alert(b); <span class="comment">// 2,2,2,3,4</span></span><br></pre></td></tr></table></figure>
+<p><strong><code>_.cloneDeep()</code></strong></p>
+<p>函数库loadsh提供<code>_.cloneDeep</code>用来做深拷贝</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>);</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">	a: <span class="number">1</span>,</span><br><span class="line">	b: &#123; <span class="attr">f</span>: &#123; <span class="attr">g</span>: <span class="number">1</span> &#125; &#125;,</span><br><span class="line">	c: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = _.cloneDeep(obj1);</span><br><span class="line"><span class="built_in">console</span>.log(obj1.b.f === obj2.b.f);</span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h2 id="获取当前页面url"><a href="#获取当前页面url" class="headerlink" title="获取当前页面url"></a>获取当前页面url</h2><p>以下均基于<code>window.location</code>前缀，功能是设置或获取</p>
+<ul>
+<li>href：整个URL字符串</li>
+<li>protocol：URL协议部分</li>
+<li>host：URL主机部分</li>
+<li>port：URL关联的端口号码</li>
+</ul>
+<h2 id="JS中两数组运算"><a href="#JS中两数组运算" class="headerlink" title="JS中两数组运算"></a>JS中两数组运算</h2><p>数组运算：交集、差集、并集、补集</p>
+<h3 id="ES5语法实现"><a href="#ES5语法实现" class="headerlink" title="ES5语法实现"></a>ES5语法实现</h3><p>直接使用filter, concat计算</p>
+<blockquote>
+<p>filter语法：</p>
+<p><code>array.filter(function(currentValue,index,arr), thisValue)</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">10</span>]</span><br><span class="line"><span class="comment">//交集</span></span><br><span class="line"><span class="keyword">var</span> c = a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123; <span class="keyword">return</span> b.indexOf(v) &gt; <span class="number">-1</span> &#125;)</span><br><span class="line"><span class="comment">//差集</span></span><br><span class="line"><span class="keyword">var</span> d = a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123; <span class="keyword">return</span> b.indexOf(v) == <span class="number">-1</span> &#125;)</span><br><span class="line"><span class="comment">//补集 ???</span></span><br><span class="line"><span class="keyword">var</span> e = a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123; <span class="keyword">return</span> !(b.indexOf(v) &gt; <span class="number">-1</span>) &#125;)</span><br><span class="line">        .concat(b.filter(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123; <span class="keyword">return</span> !(a.indexOf(v) &gt; <span class="number">-1</span>)&#125;))</span><br><span class="line"><span class="comment">//并集</span></span><br><span class="line"><span class="keyword">var</span> f = a.concat(b.filter(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123; <span class="keyword">return</span> !(a.indexOf(v) &gt; <span class="number">-1</span>)&#125;));</span><br></pre></td></tr></table></figure>
+<h3 id="ES6语法实现"><a href="#ES6语法实现" class="headerlink" title="ES6语法实现"></a>ES6语法实现</h3><p>ES6中可以借助扩展运算符以及<code>set</code>的特性实现相关计算，代码更加简洁</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sa = <span class="keyword">new</span> <span class="built_in">Set</span>(a);</span><br><span class="line"><span class="keyword">var</span> sb = <span class="keyword">new</span> <span class="built_in">Set</span>(b);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 交集</span></span><br><span class="line"><span class="keyword">let</span> intersect = a.filter(<span class="function"><span class="params">x</span> =&gt;</span> sb.has(x));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 差集</span></span><br><span class="line"><span class="keyword">let</span> minus = a.filter(<span class="function"><span class="params">x</span> =&gt;</span> !sb.has(x));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 补集</span></span><br><span class="line"><span class="keyword">let</span> complement  = [...a.filter(<span class="function"><span class="params">x</span> =&gt;</span> !sb.has(x)), ...b.filter(<span class="function"><span class="params">x</span> =&gt;</span> !sa.has(x))];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 并集</span></span><br><span class="line"><span class="keyword">let</span> unionSet = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>([...a, ...b]));</span><br></pre></td></tr></table></figure>
+<h3 id="使用jQuery实现"><a href="#使用jQuery实现" class="headerlink" title="使用jQuery实现"></a>使用jQuery实现</h3><blockquote>
+<p>什么是jQuery？</p>
+<p>jQuery是一个简洁快速的JavaScript脚本库，它允许我们在网页上简单的操作文档、处理事件、运行动画效果或者添加异步交互。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">10</span>]</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"数组a："</span>, a);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"数组b："</span>, b);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 交集</span></span><br><span class="line"><span class="keyword">let</span> intersect = $(a).filter(b).toArray();</span><br><span class="line"><span class="comment">// 差集</span></span><br><span class="line"><span class="keyword">let</span> minus = $(a).not(b).toArray();</span><br><span class="line"><span class="comment">// 补集</span></span><br><span class="line"><span class="keyword">let</span> complement  = $(a).not(b).toArray().concat($(b).not(a).toArray());</span><br><span class="line"><span class="comment">// 并集</span></span><br><span class="line"><span class="keyword">let</span> unionSet = $.unique(a.concat(b));</span><br></pre></td></tr></table></figure>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><h3 id="普通表单上传"><a href="#普通表单上传" class="headerlink" title="普通表单上传"></a>普通表单上传</h3><p>使用PHP展示常规的表单上传。首先构建文件上传的表单，并指定表单的提交内容类型为<code>enctype=&quot;multipart/form-data&quot;</code>，表明表单需要上传二进制数据</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/index.php"</span> <span class="attr">method</span>=<span class="string">"POST"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"myfile"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后编写index.php实现上传文件，使用<code>move_uploaded_file</code>即可</p>
+<blockquote>
+<p>PHP是一种服务器端的HTML脚本/编程语言</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$imgName = <span class="string">'IMG'</span>.time().<span class="string">'.'</span>.str_replace(<span class="string">'image/'</span>,<span class="string">''</span>,$_FILES[<span class="string">"myfile"</span>][<span class="string">'type'</span>]);</span><br><span class="line">$fileName =  <span class="string">'upload/'</span>.$imgName;</span><br><span class="line"><span class="comment">// 移动上传文件至指定upload文件夹下，并根据返回值判断操作是否成功</span></span><br><span class="line"><span class="keyword">if</span> (move_uploaded_file($_FILES[<span class="string">'myfile'</span>][<span class="string">'tmp_name'</span>], $fileName))&#123;</span><br><span class="line">    <span class="keyword">echo</span> $fileName;</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"nonn"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="异步上传"><a href="#异步上传" class="headerlink" title="异步上传"></a>异步上传</h3><p>form表单上传大文件时，很容易出现服务器超时的问题。通过XHR前端可以进行异步上传文件的操作</p>
+<p><strong>文件编码上传</strong></p>
+<p>第一个思路是将文件编码，然后在服务端解码。例如将图片转换成base64传递，在服务端只需解码base64，然后保存图片。</p>
+<p>base64编码的缺点在于其体积比原图大（将三个字节转化为四个），对于体积很大的文件来说，上传和解析的时间明显增加。</p>
+<p>除了base64编码，还可以在前端直接读取文件内容后，以二进制格式上传。</p>
+<p><strong>formData异步上传</strong></p>
+<p>FormData对象主要用来组装一组用XHR发送请求的键/值对，可以更加灵活地发送Ajax请求</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> files = e.target.files <span class="comment">// 获取input的file对象</span></span><br><span class="line"><span class="keyword">let</span> formData = <span class="keyword">new</span> FormData();</span><br><span class="line">formData.append(<span class="string">'file'</span>, file);</span><br><span class="line">axios.post(url, formData);</span><br></pre></td></tr></table></figure>
+<p>服务端处理方式与直接的form表单请求基本相同</p>
+<p><strong>iframe无刷新页面</strong></p>
+<p>在低版本浏览器上，XHR不支持直接上传fromdata，只能用form来上传文件，而form提交会进行页面跳转，这是由target属性决定的</p>
+<p>要用户体验异步上传文件的感觉，可以通过framename指定iframe来实现</p>
+<h3 id="大文件上传"><a href="#大文件上传" class="headerlink" title="大文件上传"></a>大文件上传</h3><p>大文件上传最大的问题是：在同一个请求中，要上传大量数据，导致过程漫长且失败后要从头开始。综合来看，大文件上传需要解决以下需求：</p>
+<ul>
+<li>支持拆分上传请求</li>
+<li>支持断点续传</li>
+<li>支持显示上传进度和暂停上传</li>
+</ul>
+<h4 id="文件切片"><a href="#文件切片" class="headerlink" title="文件切片"></a>文件切片</h4><p>若我们使用编码方式上传，在前端我们只要先获取文件的二进制内容，然后对其内容进行拆分，最后将每个切片上传到服务端即可。</p>
+<p>在JavaScript中，File对象是Blob对象的子类，我们可以使用Blob对象包含的slice方法对二进制文件进行拆分：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">slice</span>(<span class="params">file, piece = <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">5</span></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> totalSize = file.size; <span class="comment">// 文件总大小</span></span><br><span class="line">	<span class="keyword">let</span> start = <span class="number">0</span>; <span class="comment">// 每次上传的开始字节</span></span><br><span class="line">	<span class="keyword">let</span> end = start + piece; <span class="comment">// 每次上传的结尾字节</span></span><br><span class="line">	<span class="keyword">let</span> chunks = []</span><br><span class="line">	<span class="keyword">while</span> (start &lt; totalSize) &#123;</span><br><span class="line">		<span class="comment">// 根据长度截取每次需要上传的数据</span></span><br><span class="line">		<span class="comment">// File对象继承自Blob对象，因此包含slice方法</span></span><br><span class="line">		<span class="keyword">let</span> blob = file.slice(start, end); </span><br><span class="line">		chunks.push(blob)</span><br><span class="line">		start = end;</span><br><span class="line">		end = start + piece;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> chunks</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>将文件拆分成piece大小的分块，每次请求只需要上传这一部分的分块即可</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> file = <span class="built_in">document</span>.querySelector(<span class="string">"[name=file]"</span>).files[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">const</span> LENGTH = <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">let</span> chunks = slice(file, LENGTH); <span class="comment">// 首先拆分切片</span></span><br><span class="line">chunks.forEach(<span class="function"><span class="params">chunk</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> fd = <span class="keyword">new</span> FormData();</span><br><span class="line">	fd.append(<span class="string">"file"</span>, chunk);</span><br><span class="line">	post(<span class="string">'/mkblk.php'</span>, fd)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>服务器接收到这些切片后，再将他们拼接起来就可以了，下面是用PHP拼接切片的示例代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$filename = <span class="string">'./upload/'</span> . $_POST[<span class="string">'filename'</span>];<span class="comment">//确定上传的文件名</span></span><br><span class="line"><span class="comment">//第一次上传时没有文件，就创建文件，此后上传只需要把数据追加到此文件中</span></span><br><span class="line"><span class="keyword">if</span>(!file_exists($filename))&#123;</span><br><span class="line">	move_uploaded_file($_FILES[<span class="string">'file'</span>][<span class="string">'tmp_name'</span>],$filename);</span><br><span class="line">&#125; <span class="keyword">else</span>&#123;</span><br><span class="line">	file_put_contents($filename,file_get_contents($_FILES[<span class="string">'file'</span>][<span class="string">'tmp_name'</span>]),FILE_APPEND);</span><br><span class="line">	echo $filename;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方法存在的问题：</p>
+<ul>
+<li>无法识别切片属于哪个文件</li>
+<li>无法保证服务器接收到的切片是按照请求顺序的</li>
+</ul>
+<h4 id="还原切片"><a href="#还原切片" class="headerlink" title="还原切片"></a>还原切片</h4><p>为了解决以上问题，我们设置了以下流程：</p>
+<ul>
+<li>首先在同一文件的每个切片上传递同一个<code>context</code>参数</li>
+<li>为确定顺序，在每个切片上标记一个位置索引值</li>
+<li>确认所有切片上传后，客户端调用<code>mkfile</code>接口通知服务端进行拼接</li>
+<li>找到同一个<code>context</code>下的所有切片，按顺序拼接还原成文件</li>
+</ul>
+<p>对于<code>context</code>参数有两种方式可以获取：</p>
+<ul>
+<li>根据文件名、文件长度等基本信息拼接，为避免多个用户上传相同的文件，可以再额外拼接用户信息如<code>uid</code>等保证唯一性</li>
+<li>根据文件的二进制内容计算文件hash，计算量大</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取context，同一个文件会返回相同的值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createContext</span>(<span class="params">file</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> file.name + file.length</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> file = <span class="built_in">document</span>.querySelector(<span class="string">"[name=file]"</span>).files[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">const</span> LENGTH = <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">let</span> chunks = slice(file, LENGTH);</span><br><span class="line"><span class="comment">// 获取对于同一个文件，获取其的context</span></span><br><span class="line"><span class="keyword">let</span> context = createContext(file);</span><br><span class="line"><span class="keyword">let</span> tasks = [];</span><br><span class="line">chunks.forEach(<span class="function">(<span class="params">chunk, index</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="keyword">let</span> fd = <span class="keyword">new</span> FormData();</span><br><span class="line"> fd.append(<span class="string">"file"</span>, chunk);</span><br><span class="line"> <span class="comment">// 传递context</span></span><br><span class="line"> fd.append(<span class="string">"context"</span>, context);</span><br><span class="line"> <span class="comment">// 传递切片索引值</span></span><br><span class="line"> fd.append(<span class="string">"chunk"</span>, index + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"> tasks.push(post(<span class="string">"/mkblk.php"</span>, fd));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 所有切片上传完毕后，调用mkfile接口</span></span><br><span class="line"><span class="built_in">Promise</span>.all(tasks).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line"> <span class="keyword">let</span> fd = <span class="keyword">new</span> FormData();</span><br><span class="line"> fd.append(<span class="string">"context"</span>, context);</span><br><span class="line"> fd.append(<span class="string">"chunks"</span>, chunks.length);</span><br><span class="line"> post(<span class="string">"/mkfile.php"</span>, fd).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(res);</span><br><span class="line"> &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在mkblk.php接口中，我们通过<code>context</code>保存同一个文件相关的切片</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mkblk.php</span></span><br><span class="line">$context = $_POST[<span class="string">'context'</span>];</span><br><span class="line">$path = <span class="string">'./upload/'</span> . $context;</span><br><span class="line"><span class="keyword">if</span>(!is_dir($path))&#123;</span><br><span class="line">	mkdir($path);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 把同一个文件的切片放在相同的目录下</span></span><br><span class="line">$filename = $path .<span class="string">'/'</span>. $_POST[<span class="string">'chunk'</span>];</span><br><span class="line">$res = move_uploaded_file($_FILES[<span class="string">'file'</span>][<span class="string">'tmp_name'</span>],$filename);</span><br></pre></td></tr></table></figure>
+<h4 id="断点续传"><a href="#断点续传" class="headerlink" title="断点续传"></a>断点续传</h4><p>断点续传的实现十分简单：</p>
+<ul>
+<li>在切片上传成功后，保存已上传的切片信息</li>
+<li>当下次传输相同文件时，遍历切片列表，只选择未上传的切片上传</li>
+<li>所有切片上传完毕后，再调用<code>mkfile</code>接口通知服务端进行文件合并</li>
+</ul>
+<p>保存已上传切片信息有两种策略：</p>
+<ul>
+<li>通过<code>localStorage</code>等方式保存在前端浏览器中，不依赖于服务端，实现简单。缺点是若用户清除本地文件，会导致上传记录丢失</li>
+<li>服务端本身知道哪些切片已经上传，因此可以由服务端额外提供一个根据<code>context</code>查询已上传切片的接口，在上传文件前调用该文件的历史上传记录</li>
+</ul>
+<p>例如，我们通过在本地保存已上传切片记录，来实现断点续传：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取已上传切片记录</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUploadSliceRecord</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> record = localStorage.getItem(context)</span><br><span class="line">	<span class="keyword">if</span>(!record) &#123;</span><br><span class="line">		<span class="keyword">return</span> []</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="built_in">JSON</span>.parse(record)</span><br><span class="line">		&#125; <span class="keyword">catch</span>(e)&#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 保存已上传切片</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">saveUploadSliceRecord</span>(<span class="params">context, sliceIndex</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> list = getUploadSliceRecord(context)</span><br><span class="line">	list.push(sliceIndex)</span><br><span class="line">	localStorage.setItem(context, <span class="built_in">JSON</span>.stringify(list))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在上传前检测已上传记录，上传后保存记录</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> context = createContext(file);</span><br><span class="line"><span class="comment">// 获取上传记录</span></span><br><span class="line"><span class="keyword">let</span> record = getUploadSliceRecord(context);</span><br><span class="line"><span class="keyword">let</span> tasks = [];</span><br><span class="line">chunks.forEach(<span class="function">(<span class="params">chunk, index</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="comment">// 已上传的切片则不再重新上传</span></span><br><span class="line"> <span class="keyword">if</span>(record.includes(index))&#123;</span><br><span class="line"> 	<span class="keyword">return</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">let</span> fd = <span class="keyword">new</span> FormData();</span><br><span class="line"> fd.append(<span class="string">"file"</span>, chunk);</span><br><span class="line"> fd.append(<span class="string">"context"</span>, context);</span><br><span class="line"> fd.append(<span class="string">"chunk"</span>, index + <span class="number">1</span>);</span><br><span class="line"> <span class="keyword">let</span> task = post(<span class="string">"/mkblk.php"</span>, fd).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line"> 	<span class="comment">// 上传成功后保存已上传切片记录</span></span><br><span class="line">	 saveUploadSliceRecord(context, index)</span><br><span class="line"> 	record.push(index)</span><br><span class="line"> &#125;)</span><br><span class="line"> tasks.push(task);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="上传进度和暂停"><a href="#上传进度和暂停" class="headerlink" title="上传进度和暂停"></a>上传进度和暂停</h4><p>通过<code>XHR.upload</code>中的progress方法可以实现监控每一个切片的上传进度</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>一个函数和对其周围状态（lexical environment，词法环境）的引用捆绑在一起，这样的组合就是<strong>闭包</strong>。也就是说，<u>闭包可以让你在一个内层函数中访问到外层函数的作用域</u>。</p>
+<p>在JavaScript中，每当创建一个函数，闭包就会同时创建</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>让外部访问函数内部变量成为可能</li>
+<li>避免使用全局变量，防止全局变量污染</li>
+<li>让局部变量常驻内存</li>
+<li>会造成内存泄漏（一块内存空间被长期占用而不释放）</li>
+</ul>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p><strong>埋点计数器</strong></p>
+<p>由于匿名函数访问了父级作用域的变量<code>num</code>，它是一个闭包函数。所以<code>count()</code>的执行上下文会继续保留在内存中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">count</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ++num</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> getNum = count();</span><br><span class="line"><span class="keyword">var</span> getNewNum = count();</span><br><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'button'</span>)[<span class="number">0</span>].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'点击加入购物车次数： '</span>+getNum());</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'button'</span>)[<span class="number">1</span>].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'点击付款次数： '</span>+getNewNum());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>事件 + 循环</strong></p>
+<p>对于以下方式，打印出来的不是按照序号的。因为<code>onclick</code>后面的函数是一个闭包，但操作的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++) &#123;</span><br><span class="line">    lis[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解决方法：使用匿名函数，形成闭包，这样操作的就是不同的词法环境。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;</span><br><span class="line">    	lis[j].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        	alert(j);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>//problem!!!</p>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>一个文件就是一个模块，这个文件内的作用域唯一，可以向外暴露变量、函数等等。模块化的出现减少了代码的繁琐，利于代码复用和日后维护。目前流行的JS模块化规范包括<strong>CommonJS, AMD, CMD, ES6的模块系统</strong>。</p>
+<h3 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h3><p>CommonJS规范中，加载模块是<strong>同步</strong>的，只要加载完成才能执行后面的操作。<strong>NodeJS</strong>是使用CommonJS的模块化规范</p>
+<p><strong>module, exports 和 require</strong></p>
+<ul>
+<li><p>每个文件是一个模块，有自己的作用域。模块内部，module变量代表当前模块，是一个对象</p>
+</li>
+<li><p>exports属性（module.exports）是对外接口，其他文件加载该模块，实际上就是读取module.exports变量。不能将exports指向一个值，因为这样等于切断了exports和module.exports的联系</p>
+</li>
+<li><p>require命令用于加载模块文件，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//name.js</span></span><br><span class="line">exports.name = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="string">'李婷婷'</span>&#125;; <span class="comment">//导出</span></span><br><span class="line"><span class="comment">//getName.js</span></span><br><span class="line"><span class="keyword">let</span> getName = <span class="built_in">require</span>(<span class="string">'name'</span>); <span class="comment">//引入</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="ES-Module"><a href="#ES-Module" class="headerlink" title="ES Module"></a>ES Module</h3><p>使用<code>export</code>和<code>import</code>关键字实现模块化</p>
+
+
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+           
+          <li class="next">
+            <a
+              href="/2024/07/02/文件引入方式/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="文件引入方式"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
+        </ul>
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
+        
+        <!-- tip end -->
+
+        <!-- Music start-->
+        
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#死锁"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">死锁</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常见的遍历方法"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">常见的遍历方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#for-in"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">for-in</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#for-of"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">for-of</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#forEach"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">forEach()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#比较与选择"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">比较与选择</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#set-和-map"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">set 和 map</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#set"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">set</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#map"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">map</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件异步上传"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">文件异步上传</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#防抖和节流"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">防抖和节流</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#防抖"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">防抖</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#节流"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">节流</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#浅拷贝与深拷贝"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">浅拷贝与深拷贝</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#浅拷贝"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">浅拷贝</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#深拷贝"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">深拷贝</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#获取当前页面url"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">获取当前页面url</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JS中两数组运算"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">JS中两数组运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ES5语法实现"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">ES5语法实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ES6语法实现"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text">ES6语法实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用jQuery实现"><span class="toc-nav-number">8.3.</span> <span class="toc-nav-text">使用jQuery实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件上传"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">文件上传</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#普通表单上传"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text">普通表单上传</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#异步上传"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text">异步上传</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#大文件上传"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text">大文件上传</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#文件切片"><span class="toc-nav-number">9.3.1.</span> <span class="toc-nav-text">文件切片</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#还原切片"><span class="toc-nav-number">9.3.2.</span> <span class="toc-nav-text">还原切片</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#断点续传"><span class="toc-nav-number">9.3.3.</span> <span class="toc-nav-text">断点续传</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#上传进度和暂停"><span class="toc-nav-number">9.3.4.</span> <span class="toc-nav-text">上传进度和暂停</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#闭包"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">闭包</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#特点"><span class="toc-nav-number">10.1.</span> <span class="toc-nav-text">特点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#应用"><span class="toc-nav-number">10.2.</span> <span class="toc-nav-text">应用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#模块化"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">模块化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CommonJS规范"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">CommonJS规范</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ES-Module"><span class="toc-nav-number">11.2.</span> <span class="toc-nav-text">ES Module</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#前端"
+              title="前端"
+              >前端</a
+            >
+            
+            <a
+              class="tag"
+              href="/tags/#JS"
+              title="JS"
+              >JS</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
+
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/xoioiiox">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; xoioiiox 2024 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/xoioiiox" target="_blank" rel="noopener">
+                        <i>xoioiiox</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://xoioiiox.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🍅&quot;,&quot;🧀&quot;,&quot;🍩&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
