@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="google-site-verification"
+    content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"
+  />
+  <meta name="baidu-site-verification" content="093lY4ziMu" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <meta name="description" content="A hexo theme" />
+  <meta name="keyword" content="dusign, hexo-theme-snail" />
+  <link rel="shortcut icon" href="/img/guide.png" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <link rel="stylesheet" href="/css/walineRoot.css" />
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+  <title>
+     浏览器相关 - XoioiioX&#39;s Blog 
+  </title>
+
+  <link
+    rel="canonical"
+    href="https://xoioiiox.github.io/2024/07/11/浏览器相关/"
+  />
+
+  <!-- Bootstrap Core CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+  <!-- Custom CSS -->
+   
+<link rel="stylesheet" href="/css/dusign-light.css">
+ 
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+ 
+<link rel="stylesheet" href="/css/font-awesome.css">
+ 
+<link rel="stylesheet" href="/css/toc.css">
+
+  <!-- background effects end -->
+  
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="/css/highlight.css">
+ 
+<link rel="stylesheet" href="/css/widget.css">
+ 
+<link rel="stylesheet" href="/css/rocket.css">
+
+  
+<link rel="stylesheet" href="/css/signature.css">
+ 
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+  <link
+    rel="stylesheet"
+    href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  />
+
+  <!-- photography -->
+  
+<link rel="stylesheet" href="/css/photography.css">
+
+
+  <!-- ga & ba script hoook -->
+  <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('bg1.jpg')
+                /*post*/
+            
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/dusign.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+                            
+                        </div>
+                        <h1>浏览器相关</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xoioiiox on
+                            2024-07-11
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">1.4k</span> and
+                                Reading Time <span class="post-count">5</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">XoioiioX&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <h2 id="浏览器存储"><a href="#浏览器存储" class="headerlink" title="浏览器存储"></a>浏览器存储</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>cookie</code>, <code>sessionStorage</code>, <code>localStorage</code></p>
+<p>以上都是保存在浏览器端的</p>
+<ul>
+<li>保存方式<ul>
+<li><code>cookie</code>数据在http请求中携带，即在浏览器和服务器间来回传递</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>仅在本地保存</li>
+</ul>
+</li>
+<li>存储大小<ul>
+<li><code>cookie</code>不能超过4k，并且由于每次http请求都会携带，所以只适合保存很小的数据，例如会话表示</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>可以达到5M或更大</li>
+</ul>
+</li>
+<li>数据有效期<ul>
+<li><code>sessionStorage</code>仅在浏览器窗口关闭前有效</li>
+<li><code>localStorage</code>始终有效，用作持久化存储</li>
+<li><code>cookie</code>只在设置过期时间之前有效</li>
+</ul>
+</li>
+<li>作用域<ul>
+<li><code>sessionStorage</code>不在不同的浏览器窗口中共享，即使是同一个页面</li>
+<li><code>localStorage</code>和<code>cookie</code>在所有同源窗口中共享</li>
+</ul>
+</li>
+</ul>
+<h2 id="访问页面流程"><a href="#访问页面流程" class="headerlink" title="访问页面流程"></a>访问页面流程</h2><ul>
+<li>URL解析</li>
+<li>DNS查询</li>
+<li>TCP连接</li>
+<li>处理请求</li>
+<li>接受响应</li>
+<li>渲染页面</li>
+</ul>
+<h2 id="浏览器垃圾回收机制"><a href="#浏览器垃圾回收机制" class="headerlink" title="浏览器垃圾回收机制"></a>浏览器垃圾回收机制</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>浏览器的JavaScript具有自动垃圾回收机制（GC, Garbage Collecation），执行环境会负责管理代码执行过程中使用的内存。<u>垃圾收集器会定期找出哪些不在继续使用的变量，然后释放其内存。</u></p>
+<ul>
+<li><p>不再使用的变量也就是<strong>生命周期结束</strong>的变量，只可能是局部变量。在函数执行过程中，会给局部变量在堆栈上分配相应空间。注意闭包由于内部函数的原因，外部函数不能算结束。</p>
+</li>
+<li><p>全局变量的生命周期直至浏览器卸载页面才会结束。</p>
+</li>
+</ul>
+<p>垃圾收集器需要确定那个变量没有使用，通常有以下两种方式：<strong>标记清除</strong>和<strong>引用计数</strong></p>
+<h3 id="标记清除"><a href="#标记清除" class="headerlink" title="标记清除"></a>标记清除</h3><p>是JS中最常用的垃圾回收方式，IE9+，Firefox，Chrome的JS实现都是采用该策略</p>
+<ul>
+<li>垃圾收集器在运行时给内存中所有变量加上标记</li>
+<li>然后除去环境中变量以及被环境中变量引用的变量（闭包）的标记</li>
+<li>此后带标记的变量将被视为准备删除，因为环境中变量无法访问到</li>
+<li>最后垃圾收集器完成内存清除工作，销毁那些带标记的值，并回收空间</li>
+</ul>
+<h3 id="引用计数"><a href="#引用计数" class="headerlink" title="引用计数"></a>引用计数</h3><p>引用计数是跟踪记录每个值被引用的次数</p>
+<ul>
+<li>当声明一个变量并将一个引用类型值赋给该变量时，这个值引用次数为1</li>
+<li>相反，如果包含对这个值引用的变量又取得另一个值，该值的引用次数减1</li>
+<li>值的引用次数为0时，说明无法再访问，可以将其内存收回</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = &#123;&#125; ;        <span class="comment">//a的引用次数为0 </span></span><br><span class="line">    <span class="keyword">var</span> b = a ;			<span class="comment">//a的引用次数加1，为1 </span></span><br><span class="line">    <span class="keyword">var</span> c = a;          <span class="comment">//a的引用次数再加1，为2</span></span><br><span class="line">    <span class="keyword">var</span> b = &#123;&#125;;         <span class="comment">//a的引用次数减1，为1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="token与cookie"><a href="#token与cookie" class="headerlink" title="token与cookie"></a>token与cookie</h2><h3 id="「cookie」"><a href="#「cookie」" class="headerlink" title="「cookie」"></a>「cookie」</h3><p>类型为小型文本文件，是某些网站为了辨别用户身份，进行session跟踪而存储在用户本地终端上的数据，由用户客户端计算机暂时或永久保存的信息</p>
+<p><strong>为什么需要cookie？</strong></p>
+<p>接口通过HTTP进行数据交换，每次链接都是独立存在的，因此每次都需要重新验证身份</p>
+<p>cookie的出现可以弥补HTTP无状态的问题，cookie可以作为一个状态保存的状态机，用来保存用户的相关登录状态</p>
+<ul>
+<li>第一次验证通过后，服务器通过<code>set-cookie</code>令客户端将自己的cookie保存起来</li>
+<li>下一次发送请求时，直接带上cookie即可</li>
+<li>服务器检测到客户端发送的cookie与其保存的cookie值一致，则直接信任链接，不再验证</li>
+</ul>
+<p><img src="4210970fd4f641ce860eccfde440e16d_tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp" alt=""></p>
+<p><strong>语法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"name=value; expires=evalue; path=pvalue; domain=dvalue; secure;”</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>name=value</code>：必选参数，这是一个键值对，分别表示要存入的<strong>属性和值</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie=<span class="string">"name=中文"</span>;</span><br><span class="line"><span class="comment">//为了防止中文乱码，我们可以使用encodeURIComponent()编码；decodeURIComponent()解码</span></span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="built_in">encodeURIComponent</span>(<span class="string">"name"</span>)+<span class="string">"="</span>+<span class="built_in">encodeURIComponent</span>(<span class="string">"中文"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>expires=evalue</code>：可选参数，对象有效时间，只支持GTM标准时间，需要<code>toUTCString()</code>进行时间转换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="built_in">document</span>.cookie=<span class="string">"name=vae;expires="</span>+date.toUTCString();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>path=pvalue</code>：可选阐述，限制访问cookie的目录</p>
+</li>
+<li><p><code>domain=dvalue</code>：可选参数，限制只有设置了的域名才能访问</p>
+</li>
+<li><p><code>secure=true|false</code>：可选参数，默认true不安全传输，否则必须通过https才能获得cookie</p>
+</li>
+</ul>
+<h3 id="「token」"><a href="#「token」" class="headerlink" title="「token」"></a>「token」</h3><p>token，令牌，代表执行某些操作的权利的对象。简单来说，就是类似 cookie 的一种验证信息</p>
+<ul>
+<li>客户端通过登录验证后，服务器会返回给客户端一个加密的 token</li>
+<li>然后当客户端再次向服务器发起连接时，带上token</li>
+<li>服务器直接对token进行校验即可完成权限校验</li>
+</ul>
+<p><strong>为什么还需要 Token？</strong></p>
+<ul>
+<li>Cookie 作为 HTTP 规范，其出现历史久远，因此存在一些历史遗留问题，比如<strong>跨域限制</strong>等。Cookie 作为 HTTP 规范中的内容，其存在<strong>默认存储以及默认发送</strong>的行为，存在一定的<strong>安全性问题</strong></li>
+<li>相较于 Cookie，token 需要自己存储，自己进行发送，<strong>不存在跨域限制</strong>，因此 Token 更加的灵活，没有 Cookie 那么多的“历史包袱”束缚，在<strong>安全性</strong>上也能够做更多的优化。</li>
+</ul>
+<p><strong>Token 传递过程</strong></p>
+<p><img src="126f7a69cf6c43e7bd413a9f520b0d10_tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp" alt=""></p>
+<p><strong>Token 的优势</strong></p>
+<ul>
+<li>cookie内存只有4kb，主要存储用户id，其他用户信息存储在服务器的session中</li>
+<li>Token没有内存限制，用户信息可以存储Token中，返回给用户自行存储。减少了服务器的存储压力</li>
+</ul>
+
+
+        <hr />
+        <!-- Pager -->
+        <ul class="pager">
+           
+          <li class="next">
+            <a
+              href="/2024/07/09/JavaScript补充知识/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="JavaScript补充（一）"
+              >Next Post &rarr;</a
+            >
+          </li>
+          
+        </ul>
+
+        <!-- tip start -->
+         
+        <div class="comment_notes">
+          <p>This is copyright.</p>
+        </div>
+        
+        <!-- tip end -->
+
+        <!-- Music start-->
+        
+        <!-- Music end -->
+
+        <!-- Sharing -->
+        
+        <div
+          class="social-share"
+          data-wechat-qrcode-helper=""
+          align="center"
+        ></div>
+        <!--  css & js -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+        
+        <!-- Sharing -->
+
+        <!-- gitment start -->
+        
+        <!-- gitment end -->
+
+        <!-- 来必力City版安装代码 -->
+        
+        <!-- City版安装代码已完成 -->
+
+        <!-- disqus comment start -->
+        
+        <!-- disqus comment end -->
+
+        <!-- waline comment start -->
+        
+        <!-- waline comment end -->
+      </div>
+
+      <!-- Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#浏览器存储"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">浏览器存储</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#概念"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">概念</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#访问页面流程"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">访问页面流程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#浏览器垃圾回收机制"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">浏览器垃圾回收机制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#介绍"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#标记清除"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">标记清除</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#引用计数"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">引用计数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#token与cookie"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">token与cookie</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#「cookie」"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">「cookie」</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#「token」"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">「token」</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5><a href="/tags/">FEATURED TAGS</a></h5>
+          <div class="tags">
+            
+            <a
+              class="tag"
+              href="/tags/#前端"
+              title="前端"
+              >前端</a
+            >
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr />
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+          
+          <li>
+            <a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Dusign&#39;s Web</a>
+          </li>
+          
+          <li>
+            <a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a>
+          </li>
+          
+          <li>
+            <a href="#" target="_blank">Other</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+ 
+<!-- async load function -->
+<script>
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+  async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    anchors.options = {
+      visible: "hover",
+      placement: "left",
+      icon: "ℬ",
+    };
+    anchors
+      .add()
+      .remove(".intro-header h1")
+      .remove(".subheading")
+      .remove(".sidebar-container h5");
+  });
+</script>
+
+<style type="text/css">
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/xoioiiox">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; xoioiiox 2024 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/xoioiiox" target="_blank" rel="noopener">
+                        <i>xoioiiox</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://xoioiiox.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;🍅&quot;,&quot;🧀&quot;,&quot;🍩&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
